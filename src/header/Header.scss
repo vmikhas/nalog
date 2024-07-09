@@ -1,0 +1,12 @@
+.header {
+	background: linear-gradient(180deg, #40277e 0%, #b26add 100%);
+
+	&__container {
+		@include container($DESKTOP, $PADDING-DESKTOP);
+	}
+
+	&__logo {
+		width: 196px;
+		height: 40px;
+	}
+}

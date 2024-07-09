@@ -23,4 +23,8 @@
   };
 }
 
-//@mixin container
+@mixin container($width, $padding) {
+	max-width: $width;
+	padding: $padding;
+	margin: 0 auto;
+}

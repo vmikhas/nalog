@@ -4,7 +4,7 @@ export const headerContent = {
     imageLogo: {
         imgAttr: {
             src: './images/logo/logo.svg',
-            alt: 'Логотип'
+            alt: 'Логотип Столото'
         }
     }
 }
