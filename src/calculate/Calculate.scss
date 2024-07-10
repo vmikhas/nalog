@@ -1,0 +1,154 @@
+.calculate {
+  &__container {
+    @include container($DESKTOP, $PADDING-DESKTOP);
+  }
+
+  &__wrapper {
+    @include option(margin, -139px 0 0);
+    @include option(padding, 0 40px);
+
+    //background: radial-gradient(111.94% 141.42% at 0% 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(32px);
+  }
+
+  &__title {
+    @include option(padding, 32px 0 0);
+
+    @include option(font-size, 22px);
+    @include option(font-weight, 700);
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  &__form {
+    @include option(padding, 16px 0 0);
+  }
+
+  &__input {
+    @include option(max-width, 512px);
+    width: 100%;
+    height: 48px;
+    @include option(margin, 0 16px 0 0);
+    @include option(padding, 0 20px);
+
+    @include option(font-size, 16px);
+    @include option(font-weight, 400);
+    @include option(line-height, 150%);
+    color: $grey800;
+
+    border: none;
+    border-radius: 8px;
+
+    &::placeholder {
+      color: $grey500;
+    }
+  }
+
+  &__button {
+    @include option(max-width, 208px, 296px);
+    width: 100%;
+    height: 48px;
+    @include option(padding, 0 24px);
+
+    @include option(font-size, 16px);
+    @include option(font-weight, 700);
+    color: $white;
+
+    background-color: $violet;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    @include option(padding, 25px 0 0);
+  }
+
+  &__inner {
+    display: flex;
+    gap: 33px;
+  }
+
+  &__term {
+    @include option(font-size, 14px);
+    @include option(font-weight, 400);
+    @include option(line-height, 157%);
+
+    &_1 {
+      @include option(margin, 0 0 0 117px);
+    }
+  }
+
+  &__desc {
+    @include option(font-size, 32px);
+    @include option(font-weight, 700);
+    text-transform: uppercase;
+    color: $violet;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include option(height, 328px)
+  }
+
+  &__carousel {
+    @include option(padding, 25px 0 0);
+  }
+
+  &__carousel-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    @include option(padding, 15px 0 0);
+  }
+
+  &__carousel-button {
+    height: 32px;
+    padding: 0 16px;
+
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $violet;
+
+    background-color: $white;
+    border: 1px solid rgba(128, 77, 180, 0.16);
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    &_active {
+      background: rgba(128, 77, 180, 0.16);
+    }
+
+    //// todo: test
+  }
+
+  &__carousel-desc {
+    @include option(padding, 17px 0 0);
+
+    @include option(font-size, 16px);
+    @include option(font-weight, 400);
+    @include option(line-height, 150%);
+
+    &_1 {
+      padding-bottom: 12px;
+    }
+  }
+
+  &__footnote {
+    @include option(padding, 0 0 39px);
+
+    @include option(font-size, 10px);
+    @include option(font-weight, 400);
+    color: $grey600;
+  }
+}
