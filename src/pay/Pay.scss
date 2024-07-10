@@ -1,0 +1,103 @@
+.pay {
+	@include option(margin, 80px 0 0);
+	background: linear-gradient(180deg, #f8f8f8 0%, rgba(248, 248, 248, 0) 100%);
+
+	&__container {
+		@include container($DESKTOP, 0 53px 0 85px);
+	}
+
+	&__title {
+		@include option(padding, 125px 300px 0 0);
+
+		@include option(font-size, 40px);
+    @include option(font-weight, 700);
+    text-transform: uppercase;
+    color: $black;
+	}
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__box {
+
+	}
+
+	&__list {
+		display: flex;
+		gap: 104px;
+		@include option(padding, 34px 0 0);
+	}
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child)::before {
+			content: "";
+			width: 104px;
+			height: 1px;
+
+			background-color: rgba(128, 77, 180, 0.16);
+
+			position: absolute;
+			top: 50%;
+			left: 100%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__button {
+		display: block;
+		width: 48px;
+		padding: 13px;
+
+		@include option(font-size, 16px);
+    @include option(font-weight, 700);
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: $violet;
+
+		border: 1px solid rgba(128, 77, 180, 0.16);
+		border-radius: 50%;
+
+		&_active {
+			color: $white;
+
+			background-color: $violet;
+		}
+	}
+
+	&__subtitle {
+		@include option(padding, 25px 0 0);
+
+		@include option(font-size, 22px);
+    @include option(font-weight, 600);
+		@include option(line-height, 109%);
+		color: $black;
+	}
+
+	&__desc {
+		@include option(padding, 24px 55px 0 0);
+
+		@include option(font-size, 16px);
+    @include option(font-weight, 400);
+		@include option(line-height, 150%);
+		color: $grey800;
+
+		&_p {
+			@include option(padding, 0 0 12px);
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $blue;
+	}
+
+	&__image {
+		@include option(width, 550px, 392px);
+		@include option(padding, 41px 0 0);
+	}
+}

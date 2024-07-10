@@ -4,7 +4,8 @@ import Header from "./header/Header";
 import Calculate from "./calculate/Calculate";
 import Winnings from "./winnings/Winnings";
 import Pay from "./pay/Pay";
-import {calculateContent, headerContent, payContent, winningsContent} from "./constants/copyright";
+import Filling from "./filling/Filling";
+import {calculateContent, fillingContent, headerContent, payContent, winningsContent} from "./constants/copyright";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Calculate content={calculateContent} />
             <Winnings {...winningsContent} />
             <Pay {...payContent} />
+						<Filling {...fillingContent} />
         </div>
     );
 }

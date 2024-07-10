@@ -1,10 +1,11 @@
 import parse from "html-react-parser";
+import Picture from "../constants/Picture";
 
-export default function Pay({ title, paginations, subtitle, desc }) {
+export default function Pay({ title, paginations, subtitle, desc, image }) {
     return (
         <section className={"pay"}>
             <div className={"pay__container"}>
-                <h2 className={"pay__title"}>{title}</h2>
+                <h2 className={"pay__title"}>{parse(title)}</h2>
                 <div className={"pay__wrapper"}>
                     <div className={"pay__box"}>
                         <ul className={"pay__list"}>
@@ -18,7 +19,7 @@ export default function Pay({ title, paginations, subtitle, desc }) {
                         <h3 className={"pay__subtitle"}>{subtitle}</h3>
                         <p className={"pay__desc"}>{parse(desc.write)}</p>
                     </div>
-                    <div className={"pay__image"}></div>
+                    <div className={"pay__image"}><Picture {...image} /></div>
                 </div>
             </div>
         </section>

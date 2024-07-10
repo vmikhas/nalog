@@ -7,10 +7,10 @@
     @include option(margin, -139px 0 0);
     @include option(padding, 0 40px);
 
-    //background: radial-gradient(111.94% 141.42% at 0% 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    backdrop-filter: blur(32px);
+    // background: radial-gradient(111.94% 141.42% at 0% 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
     border-radius: 16px;
     box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(32px);
   }
 
   &__title {

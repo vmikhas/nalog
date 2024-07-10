@@ -38,14 +38,15 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 27.2vw);
-    justify-content: center;
-    column-gap: 34px;
+		display: flex;
+		justify-content: center;
+		gap: 35px;
     @include option(padding, 85px 0 0);
   }
 
   &__item {
+		@include option(max-width, 350px);
+
     @include option(font-size, 16px);
     @include option(font-weight, 400);
     @include option(line-height, 150%);
@@ -54,7 +55,7 @@
 
   &__link {
     display: block;
-    @include option(width, 22.9vw);
+    @include option(max-width, 22.9vw);
     @include option(margin, 24px 0 0 -1px);
     @include option(padding, 12px 0);
 

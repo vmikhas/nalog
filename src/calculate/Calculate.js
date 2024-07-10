@@ -6,23 +6,23 @@ export default function Calculate({ content }) {
         <section className={"calculate"}>
             <div className={"calculate__container"}>
                 <div className={"calculate__wrapper"}>
-                    <h2 className={"calculate__title"}>{content.calculateTitle}</h2>
+                    <h2 className={"calculate__title"}>{content.title}</h2>
                     <form className={"calculate__form"} action={"#"} method={"POST"}>
                         <input className={"calculate__input"}
                                type={"number"} name={"number"}
                                placeholder={"Введите сумму выигрыша"}
                                required
                         />
-                        <button className={"calculate__button"} type={"button"}>{content.calculateButton}</button>
+                        <button className={"calculate__button"} type={"button"}>{content.button}</button>
                     </form>
                     <dl className={"calculate__list"}>
                         <div className={"calculate__inner"}>
-                            {content.calculateTerms.map((calculateTerm, id) =>
-                                <dt className={`calculate__term calculate__term_${id}`} key={id}>{calculateTerm}</dt>)}
+                            {content.terms.map((term, id) =>
+                                <dt className={`calculate__term calculate__term_${id}`} key={id}>{term}</dt>)}
                         </div>
                         <div className={"calculate__inner"}>
-                            {content.calculateDetails.map((calculateDetail, id) =>
-                                <dd className={`calculate__desc calculate__desc_${id}`} key={id}>{calculateDetail}</dd>)}
+                            {content.details.map((detail, id) =>
+                                <dd className={`calculate__desc calculate__desc_${id}`} key={id}>{detail}</dd>)}
                         </div>
                     </dl>
                     <div className={"calculate__box"}>
