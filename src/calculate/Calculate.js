@@ -36,7 +36,7 @@ export default function Calculate({ content }) {
                                                 type={"button"}>{carouselItem.number}</button>
                                     </li>)}
                             </ul>
-                            <p className={"calculate__carousel-desc"}>{parse(content.carouselDesc.average.desc)}</p>
+                            <p className={"calculate__carousel-desc"}>{parse(content.carouselDesc.average)}</p>
                         </div>
                         <p className={"calculate__footnote"}>{content.calculateFootnote}</p>
                     </div>

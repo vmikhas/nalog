@@ -3,7 +3,8 @@ import "./style.scss";
 import Header from "./header/Header";
 import Calculate from "./calculate/Calculate";
 import Winnings from "./winnings/Winnings";
-import {calculateContent, headerContent, winningsContent} from "./constants/copyright";
+import Pay from "./pay/Pay";
+import {calculateContent, headerContent, payContent, winningsContent} from "./constants/copyright";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <Header {...headerContent} />
             <Calculate content={calculateContent} />
             <Winnings {...winningsContent} />
+            <Pay {...payContent} />
         </div>
     );
 }
