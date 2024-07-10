@@ -1,0 +1,71 @@
+.winnings {
+  &__container {
+    @include container($DESKTOP, $PADDING-DESKTOP);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    @include option(margin, -12px 0 0);
+  }
+
+  &__image {
+    @include option(width, 584px, 258px);
+    @include option(height, 439px, 194px);
+  }
+
+  &__inner {
+
+  }
+
+  &__title {
+    @include option(padding, 128px 0 0);
+
+    @include option(font-size, 40px);
+    @include option(font-weight, 700);
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  &__text {
+    @include option(padding, 17px 0 0);
+
+    @include option(font-size, 22px);
+    @include option(font-weight, 500);
+    @include option(line-height, 145%);
+    color: $grey500;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 27.2vw);
+    justify-content: center;
+    column-gap: 34px;
+    @include option(padding, 85px 0 0);
+  }
+
+  &__item {
+    //max-width: 350px;
+    @include option(font-size, 16px);
+    @include option(font-weight, 400);
+    @include option(line-height, 150%);
+    color: $grey800;
+  }
+
+  &__link {
+    display: block;
+    @include option(width, 22.9vw);
+    @include option(margin, 24px 0 0 -1px);
+    @include option(padding, 12px 0);
+
+    @include option(font-size, 16px);
+    @include option(font-weight, 700);
+    text-align: center;
+    text-decoration: none;
+    color: $white;
+
+    background-color: $violet;
+    border-radius: 8px;
+  }
+}

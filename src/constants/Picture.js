@@ -1,4 +1,4 @@
-export default function Picture({sources, imgAttr}) {
+export default function Picture({ sources, imgAttr }) {
 
     return (
         <picture>
