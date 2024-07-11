@@ -11,8 +11,13 @@
   }
 
   &__image {
-    @include option(width, 584px, 258px);
+    @include option(max-width, 584px, 258px);
+    width: 100%;
     @include option(height, 439px, 194px);
+
+    img {
+      object-fit: contain;
+    }
   }
 
   &__inner {
@@ -38,14 +43,14 @@
   }
 
   &__list {
-		display: flex;
-		justify-content: center;
-		gap: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
     @include option(padding, 85px 0 0);
   }
 
   &__item {
-		@include option(max-width, 350px);
+    @include option(max-width, 350px);
 
     @include option(font-size, 16px);
     @include option(font-weight, 400);

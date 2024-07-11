@@ -1,0 +1,117 @@
+.footer {
+  @include option(margin, 50px 0 0);
+
+  background-color: $grey800;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    @include container($DESKTOP, 0 85px 75px);
+
+    @include option(font-size, 12px);
+    @include option(font-weight, 400);
+    color: $grey300;
+  }
+
+  &__wrapper {
+    @include option(padding, 35px 0 0);
+  }
+
+  &__logo {
+    display: flex;
+    width: 183px;
+    height: 37px;
+  }
+
+  &__info {
+    @include option(padding, 24px 0 0);
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 24px;
+    @include option(padding, 24px 0 0);
+  }
+
+  &__social-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    background-color: $grey500;
+    border-radius: 8px;
+
+    &_0 {
+      img {
+        width: 26px;
+        height: 16px;
+      }
+    }
+
+    &_1 {
+      img {
+        width: 16px;
+        height: 28px;
+      }
+    }
+
+    &_2 {
+      img {
+        width: 24px;
+        height: 28px;
+      }
+    }
+
+    &_3 {
+      img {
+        width: 17px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__inner {
+    @include option(padding, 42px 0 0 95px);
+  }
+
+  &__ass {
+    @include option(padding, 32px 0 0);
+  }
+
+  &__org-list,
+  &__ass-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__org-item,
+  &__ass-item {
+    //width: 26px;
+    //height: 26px;
+  }
+
+  &__org-link,
+  &__ass-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__org-text {
+    @include option(padding, 13px 0 0);
+  }
+
+  &__ass-text {
+    @include option(padding, 16px 0 0);
+  }
+}

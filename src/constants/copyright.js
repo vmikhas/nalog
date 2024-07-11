@@ -107,7 +107,7 @@ export const fillingContent = {
     image: {
         sources: [],
         imgAttr: {
-            src: './images/forms.png',
+            src: './images/forms_1.png',
             alt: 'Бланки декларации по форме 3-НДФЛ'
         }
     },
@@ -142,7 +142,7 @@ export const casesContent = {
         sources: [],
         imgAttr: {
             src: './images/gift.png',
-            alt: ''
+            alt: 'Картинка подарка'
         }
     },
     title: 'В каких случаях налог на выигрыш достигает 35 %',
@@ -153,12 +153,69 @@ export const casesContent = {
 
 export const mapContent = {
     title: 'Налоги в других странах',
-    desc: 'Победителям из России повезло: во многих других странах налог на выигрыш — выше. Наша интерактивная карта покажет, где выигрывать выгоднее.',
-    image: {
+    desc: 'Победителям из России повезло: во многих других странах налог на выигрыш — выше. Наша интерактивная карта покажет, где&nbsp;выигрывать выгоднее.',
+    mapImage: {
         sources: [],
         imgAttr: {
             src: './images/map.png',
-            alt: ''
+            alt: 'Карта мира'
+        }
+    },
+    mapIcon: {
+        imgAttr: {
+            src: './images/icons/dot.svg',
+            alt: 'Точка на карте'
         }
     }
+}
+
+export const footerContent = {
+    imageLogo: {
+        imgAttr: {
+            src: './images/logo/logo.svg',
+            alt: 'Логотип Столото'
+        }
+    },
+    info: '<p>Информация об организаторах лотерей, о правилах их проведения, призовом фонде, количестве призов или выигрышей, сроках, месте и порядке их получения ― на&nbsp;stoloto.ru. Выигрыши носят вероятностный характер. Лотерея не является способом&nbsp;заработка<br class="footer__br-desktop" /> и источником дохода.</p>' +
+        '<p>АО «ТК «Центр», ОГРН 1127746385095, адрес: 109316, Москва, Волгоградский пр-т,<br class="footer__br-desktop"/> д. 43, корп. 3, этаж 10, пом. XXV, ком. 13Б. Реклама. 18+</p>',
+    socials: [
+        {imgAttr: {
+                src: './images/social/vk.svg',
+                alt: 'Логотип Vkontakte'
+            }},
+        {imgAttr: {
+                src: './images/social/ok.svg',
+                alt: 'Логотип Одноклассников'
+            }},
+        {imgAttr: {
+                src: './images/social/tik_tok.svg',
+                alt: 'Логотип Tik-Tok'
+            }},
+        {imgAttr: {
+                src: './images/social/rutube.svg',
+                alt: 'Логотип Rutube'
+            }},
+    ],
+    organizations: [
+        {imgAttr: {
+                src: './images/min_sporta.png',
+                alt: 'Логотип Министерство спорта РФ'
+            }},
+        {imgAttr: {
+                src: './images/min_fin.png',
+                alt: 'Логотип Министерство финансов РФ'
+            }}
+    ],
+    orgText: 'Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ.',
+    associations: [
+        {imgAttr: {
+                src: './images/world_ass.png',
+                alt: 'Логотип Всемирной лотерейной ассоциации'
+            }},
+        {imgAttr: {
+                src: './images/europe_ass.png',
+                alt: 'Логотип Европейской лотерейной ассоциации'
+            }}
+    ],
+    assText: '«Столото» состоит во Всемирной и Европейской лотерейных ассоциациях (The World Lottery Association и The European Lotteries Association). Это гарантирует соблюдение прав участников, случайность определения победителей, своевременную выплату выигрышей, конфиденциальность личных данных.'
 }

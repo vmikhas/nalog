@@ -8,9 +8,10 @@ import Filling from "./filling/Filling";
 import Resident from "./resident/Resident";
 import Cases from "./cases/Cases";
 import Map from "./map/Map";
+import Footer from "./footer/Footer";
 import {
     calculateContent, casesContent,
-    fillingContent,
+    fillingContent, footerContent,
     headerContent, mapContent,
     payContent,
     residentContent,
@@ -28,6 +29,7 @@ function App() {
             <Resident {...residentContent} />
             <Cases {...casesContent} />
             <Map {...mapContent} />
+            <Footer {...footerContent} />
         </div>
     );
 }
