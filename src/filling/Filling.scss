@@ -1,41 +1,68 @@
 .filling {
 	&__container {
-
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 32px;
+		@include container($DESKTOP, 0 85px);
 	}
 
 	&__image {
-
-	}
-
-	&__wrapper {
-
+		@include option(width, 480px, 314px);
+		height: 597px;
 	}
 
 	&__title {
+		@include option(padding, 107px 0 0);
 
+		@include option(font-size, 40px);
+		@include option(font-weight, 700);
+		text-transform: uppercase;
+		color: $black;
 	}
 
 	&__desc {
+		@include option(padding, 17px 0 16px);
 
+		@include option(font-size, 22px);
+		@include option(font-weight, 500);
+		@include option(line-height, 145%);
+		color: $grey500;
 	}
 
 	&__info {
+		@include option(padding, 11px 36px 11px 11px);
+		@include option(margin, 0 54px 33px 0);
 
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
+		color: $grey500;
+
+		border: 1px solid $grey300;
+		border-radius: 8px;
 	}
 
 	&__box {
-
+		@include option(padding, 0 0 24px);
 	}
 
 	&__subtitle {
-
+		@include option(font-size, 22px);
+		@include option(font-weight, 600);
+		@include option(line-height, 109%);
 	}
 
 	&__text {
+		@include option(padding, 8px 0 0);
 
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
 	}
 
 	&__footnote {
-		
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
 	}
 }

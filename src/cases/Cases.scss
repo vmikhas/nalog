@@ -1,0 +1,67 @@
+.cases {
+  @include option(margin, 58px 0 0);
+
+  &__container {
+    @include container($DESKTOP, 0 85px 0 67px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image {
+    @include option(max-width, 498px);
+    width: 100%;
+    @include option(max-height, 411px);
+    @include option(padding, 47px 0 0);
+  }
+
+  &__wrapper {
+    @include option(max-width, 544px);
+  }
+
+  &__title {
+    @include option(padding, 67px 0 0);
+
+    @include option(font-size, 40px);
+    @include option(font-weight, 700);
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  &__desc {
+    position: relative;
+
+    @include option(padding, 17px 0 0);
+
+    @include option(font-size, 16px);
+    @include option(font-weight, 400);
+    @include option(line-height, 150%);
+    color: $black;
+
+    &_1 {
+      @include option(padding, 0 0 16px);
+    }
+
+    &_2 {
+
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 88px;
+    left: 133px;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    background-color: transparent;
+
+    border: none;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

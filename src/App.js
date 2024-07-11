@@ -5,7 +5,17 @@ import Calculate from "./calculate/Calculate";
 import Winnings from "./winnings/Winnings";
 import Pay from "./pay/Pay";
 import Filling from "./filling/Filling";
-import {calculateContent, fillingContent, headerContent, payContent, winningsContent} from "./constants/copyright";
+import Resident from "./resident/Resident";
+import Cases from "./cases/Cases";
+import Map from "./map/Map";
+import {
+    calculateContent, casesContent,
+    fillingContent,
+    headerContent, mapContent,
+    payContent,
+    residentContent,
+    winningsContent
+} from "./constants/copyright";
 
 function App() {
     return (
@@ -14,7 +24,10 @@ function App() {
             <Calculate content={calculateContent} />
             <Winnings {...winningsContent} />
             <Pay {...payContent} />
-						<Filling {...fillingContent} />
+            <Filling {...fillingContent} />
+            <Resident {...residentContent} />
+            <Cases {...casesContent} />
+            <Map {...mapContent} />
         </div>
     );
 }

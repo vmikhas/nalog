@@ -10,18 +10,14 @@
 		@include option(padding, 125px 300px 0 0);
 
 		@include option(font-size, 40px);
-    @include option(font-weight, 700);
-    text-transform: uppercase;
-    color: $black;
+    	@include option(font-weight, 700);
+    	text-transform: uppercase;
+    	color: $black;
 	}
 
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-	}
-
-	&__box {
-
 	}
 
 	&__list {
@@ -53,7 +49,7 @@
 		padding: 13px;
 
 		@include option(font-size, 16px);
-    @include option(font-weight, 700);
+    	@include option(font-weight, 700);
 		text-align: center;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -73,7 +69,7 @@
 		@include option(padding, 25px 0 0);
 
 		@include option(font-size, 22px);
-    @include option(font-weight, 600);
+    	@include option(font-weight, 600);
 		@include option(line-height, 109%);
 		color: $black;
 	}
@@ -82,7 +78,7 @@
 		@include option(padding, 24px 55px 0 0);
 
 		@include option(font-size, 16px);
-    @include option(font-weight, 400);
+    	@include option(font-weight, 400);
 		@include option(line-height, 150%);
 		color: $grey800;
 
