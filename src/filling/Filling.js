@@ -1,12 +1,13 @@
 import Picture from "../constants/Picture";
 import parse from "html-react-parser";
 
-export default function Filling({ title, desc, info, subtitle, text, footnote, image }) {
+export default function Filling({ image, button, title, desc, info, subtitle, text, footnote }) {
 	return (
 		<section className={"filling"}>
 			<div className={"filling__container"}>
 				<div className={"filling__inner"}>
 					<div className={"filling__image"}><Picture {...image} /></div>
+					<button className={"filling__button"} type={"button"}>{button}</button>
 				</div>
 				<div className={"filling__wrapper"}>
 					<h2 className={"filling__title"}>{title}</h2>

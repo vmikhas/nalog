@@ -22,6 +22,10 @@
     color: $white;
   }
 
+	&__image {
+		
+	}
+
   &__form {
     @include option(padding, 16px 0 0);
   }

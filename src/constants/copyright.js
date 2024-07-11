@@ -11,6 +11,13 @@ export const headerContent = {
 
 export const calculateContent = {
     title: 'Сколько я получу после вычета налога?',
+		image: {
+			sources: [],
+			imgAttr: {
+					src: './images/wallet.png',
+					alt: 'Кошелек'
+			}
+	},
     button: 'Рассчитать',
     terms: [
         'Вы получите:',
@@ -107,10 +114,11 @@ export const fillingContent = {
     image: {
         sources: [],
         imgAttr: {
-            src: './images/forms_1.png',
+            src: './images/forms.png',
             alt: 'Бланки декларации по форме 3-НДФЛ'
         }
     },
+		button: 'Посмотреть образцы',
     title: 'Как заполнить бланк декларации',
     desc: 'Мы приготовили для вас подробную инструкцию. Откройте бланки слева, чтобы&nbsp;посмотреть подсказки для&nbsp;каждой&nbsp;страницы.',
     info: 'Я заполняю декларацию в специальной программе',
@@ -157,7 +165,8 @@ export const mapContent = {
     mapImage: {
         sources: [],
         imgAttr: {
-            src: './images/map.png',
+						class: 'map__image-world',
+            src: './images/map.svg',
             alt: 'Карта мира'
         }
     },
@@ -206,7 +215,7 @@ export const footerContent = {
                 alt: 'Логотип Министерство финансов РФ'
             }}
     ],
-    orgText: 'Организаторами лотерей являются Министерство спорта РФ и Министерство финансов РФ.',
+    orgText: 'Организаторами лотерей являются Министерство спорта РФ и&nbsp;Министерство финансов РФ.',
     associations: [
         {imgAttr: {
                 src: './images/world_ass.png',

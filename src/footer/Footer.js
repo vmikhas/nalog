@@ -29,7 +29,7 @@ export default function Footer({ info, imageLogo, socials, organizations, orgTex
                                     </a>
                                 </li>)}
                         </ul>
-                        <p className={"footer__org-text"}>{orgText}</p>
+                        <p className={"footer__org-text"}>{parse(orgText)}</p>
                     </div>
                     <div className={"footer__ass"}>
                         <ul className={"footer__ass-list"}>
