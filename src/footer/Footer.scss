@@ -1,6 +1,4 @@
 .footer {
-  @include option(margin, 54px 0 0);
-
   background-color: $grey800;
 
   &__container {

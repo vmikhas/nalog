@@ -8,14 +8,16 @@ export default function Calculate({ content }) {
             <div className={"calculate__container"}>
                 <div className={"calculate__wrapper"}>
                     <h2 className={"calculate__title"}>{content.title}</h2>
-										<div className={"calculate__image"}><Picture imgAttr={content.image.imgAttr} /></div>
-                    <form className={"calculate__form"} action={"#"} method={"POST"}>
-                        <input className={"calculate__input"}
-                               type={"number"} name={"number"}
-                               placeholder={"Введите сумму выигрыша"}
-                               required/>
-                        <button className={"calculate__button"} type={"button"}>{content.button}</button>
-                    </form>
+                    <div className={"calculate__holder"}>
+                        <form className={"calculate__form"} action={"#"} method={"POST"}>
+                            <input className={"calculate__input"}
+                                   type={"number"} name={"number"}
+                                   placeholder={"Введите сумму выигрыша"}
+                                   required/>
+                            <button className={"calculate__button"} type={"button"}>{content.button}</button>
+                        </form>
+                        <div className={"calculate__image"}><Picture imgAttr={content.image.imgAttr}/></div>
+                    </div>
                     <dl className={"calculate__list"}>
                         <div className={"calculate__inner"}>
                             {content.terms.map((term, id) =>

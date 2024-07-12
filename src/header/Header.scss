@@ -3,8 +3,7 @@
 	background: linear-gradient(180deg, #40277e 0%, #b26add 100%);
 
 	&__container {
-		@include container($DESKTOP, 0);
-		@include option(padding, 0 85px);
+		@include container($DESKTOP, 0 85px);
 		color: $white;
 	}
 

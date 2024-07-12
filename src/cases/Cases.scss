@@ -7,11 +7,20 @@
     justify-content: space-between;
   }
 
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
   &__image {
     @include option(max-width, 498px);
     width: 100%;
     @include option(max-height, 411px);
-    @include option(padding, 47px 0 0);
+    @include option(padding, 9px 0 0);
+
+    img {
+      object-fit: contain;
+    }
   }
 
   &__wrapper {

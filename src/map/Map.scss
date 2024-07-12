@@ -29,12 +29,12 @@
   &__image {
     position: relative;
 
-    @include option(padding, 58px 0 0 4px);
+    @include option(padding, 58px 0 54px 4px);
   }
 
 	&__image-world {
-		width: 1122px;
-		height: 554px;
+      width: 1122px;
+      height: 554px;
 	}
 
   &__button {
@@ -55,27 +55,27 @@
     @include option(height, 24px);
 
     &_usa {
-      top: 44.4%;
+      top: 40.8%;
       left: 17.8%;
     }
 
     &_india {
-      top: 53.7%;
+      top: 49.3%;
       left: 67.8%;
     }
 
     &_europe {
-      top: 39.7%;
+      top: 36.4%;
       left: 47.5%;
     }
 
     &_russia {
-      top: 27.9%;
-      left: 72.7%;
+      top: 25.5%;
+      left: 72.69%;
     }
 
     &_taiwan {
-      top: 53.7%;
+      top: 49.4%;
       left: 79.1%;
     }
   }

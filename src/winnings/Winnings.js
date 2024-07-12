@@ -1,7 +1,7 @@
 import parse from "html-react-parser";
 import Picture from "../constants/Picture";
 
-export default function Winnings({ title, text, items, link, image}) {
+export default function Winnings({ title, text, items, image}) {
     return (
         <section className={"winnings"}>
             <div className={"winnings__container"}>
@@ -13,11 +13,9 @@ export default function Winnings({ title, text, items, link, image}) {
                     </div>
                 </div>
                 <ul className={"winnings__list"}>
-                    <li className={"winnings__item"}>{parse(items.currency)}</li>
-                    <li className={"winnings__item"}>{parse(items.deduction)}</li>
-                    <li className={"winnings__item"}>{parse(items.message)}
-                        <a className={"winnings__link"} href={"#1"}>{link}</a>
-                    </li>
+                    {items.map((item, id) => <li className={`winnings__item winnings__item_${id}`}>
+                        {parse(item)}
+                    </li>)}
                 </ul>
             </div>
         </section>

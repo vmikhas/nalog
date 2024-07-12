@@ -50,18 +50,43 @@
   }
 
   &__item {
+    position: relative;
+
     @include option(max-width, 350px);
 
     @include option(font-size, 16px);
     @include option(font-weight, 400);
     @include option(line-height, 150%);
     color: $grey800;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      position: absolute;
+      top: -49px;
+      left: -1px;
+    }
+
+    &_0::before {
+      background-image: url("./../../public/images/icons/currency.svg");
+    }
+
+    &_1::before {
+      background-image: url("./../../public/images/icons/deduction.svg");
+    }
+
+    &_2::before {
+      background-image: url("./../../public/images/icons/message.svg");
+    }
   }
 
   &__link {
     display: block;
-    @include option(max-width, 22.9vw);
-    @include option(margin, 24px 0 0 -1px);
+    @include option(max-width, 23vw);
+    @include option(margin, 23px 0 0 -2px);
     @include option(padding, 12px 0);
 
     @include option(font-size, 16px);
