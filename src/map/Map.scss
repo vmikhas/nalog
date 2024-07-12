@@ -1,16 +1,17 @@
 .map {
-  @include option(margin, 111px 0 0);
+  @include option(margin, 111px 0 0, 40px 0 0);
 
   background-color: $grey200;
 
   &__container {
-    @include container($DESKTOP, 0 80px);
+    @include container($DESKTOP, 0);
+    @include option(padding, 0 80px, 0 40px);
   }
 
   &__title {
-    @include option(padding, 125px 5px 0);
+    @include option(padding, 125px 5px 0, 40px 0 0);
 
-    @include option(font-size, 40px);
+    @include option(font-size, 40px, 22px);
     @include option(font-weight, 700);
     text-transform: uppercase;
   }
@@ -18,28 +19,30 @@
   &__desc {
     @include option(max-width, 790px);
     width: 100%;
-    @include option(padding, 17px 5px 0);
+    @include option(padding, 17px 5px 0, 17px 0 0);
 
-    @include option(font-size, 22px);
+    @include option(font-size, 22px, 16px);
     @include option(font-weight, 500);
-    @include option(line-height, 145%);
+    @include option(line-height, 145%, 150%);
     color: $grey500;
   }
 
   &__image {
     position: relative;
 
-    @include option(padding, 58px 0 54px 4px);
+    display: flex;
+    justify-content: center;
+    @include option(padding, 58px 0 54px 4px, 24px 0 71px 0);
   }
 
 	&__image-world {
-      width: 1122px;
-      height: 554px;
+      @include option(width, 1122px, 295px);
+      @include option(height, 554px, 145px);
 	}
 
   &__button {
-    @include option(width, 24px);
-    @include option(height, 24px);
+    @include option(width, 24px, 16px);
+    @include option(height, 24px, 16px);
     padding: 0;
 
     background-color: transparent;
@@ -55,28 +58,28 @@
     @include option(height, 24px);
 
     &_usa {
-      top: 40.8%;
-      left: 17.8%;
+      @include option(top, 40.8%, 31.8%);
+      @include option(left, 17.8%, 15.8%);
     }
 
     &_india {
-      top: 49.3%;
-      left: 67.8%;
+      @include option(top, 49.3%, 39%);
+      @include option(left, 67.8%, 66%);
     }
 
     &_europe {
-      top: 36.4%;
-      left: 47.5%;
+      @include option(top, 36.4%, 28%);
+      @include option(left, 47.5%, 46.5%);
     }
 
     &_russia {
-      top: 25.5%;
-      left: 72.69%;
+      @include option(top, 25.5%, 20.8%);
+      @include option(left, 72.69%, 71.5%);
     }
 
     &_taiwan {
-      top: 49.4%;
-      left: 79.1%;
+      @include option(top, 49.4%, 37.3%);
+      @include option(left, 79.1%, 77.3%);
     }
   }
 }

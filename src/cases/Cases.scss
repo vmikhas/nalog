@@ -1,22 +1,26 @@
 .cases {
-  @include option(margin, 58px 0 0);
+  @include option(margin, 58px 0 0, 20px 0 0);
 
   &__container {
-    @include container($DESKTOP, 0 85px 0 67px);
+    @include container($DESKTOP, 0);
     display: flex;
+    @include option(flex-direction, row, column);
     justify-content: space-between;
+    @include option(padding, 0 85px 0 67px, 0 40px);
   }
 
   &__inner {
     display: flex;
+    @include option(flex-direction, row, column);
     align-items: center;
   }
 
   &__image {
-    @include option(max-width, 498px);
+    @include option(max-width, 498px, 208px);
     width: 100%;
-    @include option(max-height, 411px);
-    @include option(padding, 9px 0 0);
+    @include option(max-height, 411px, 167px);
+    @include option(margin, 0, 0 35px 0 0);
+    @include option(padding, 9px 0 0, 11px 0 0);
 
     img {
       object-fit: contain;
@@ -28,9 +32,9 @@
   }
 
   &__title {
-    @include option(padding, 67px 0 0);
+    @include option(padding, 67px 0 0, 35px 0 0);
 
-    @include option(font-size, 40px);
+    @include option(font-size, 40px, 22px);
     @include option(font-weight, 700);
     text-transform: uppercase;
     color: $black;
@@ -57,8 +61,8 @@
 
   &__button {
     position: absolute;
-    top: 88px;
-    left: 133px;
+    @include option(top, 88px, 162px);
+    @include option(left, 133px, 132px);
 
     width: 20px;
     height: 20px;

@@ -1,6 +1,7 @@
 .winnings {
   &__container {
-    @include container($DESKTOP, $PADDING-DESKTOP);
+    @include container($DESKTOP, 0);
+    @include option(padding, 0 45px, 0 16px);
   }
 
   &__wrapper {
@@ -8,12 +9,19 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
     @include option(margin, -12px 0 0);
+
+    @media (max-width: $TABLET) {
+      display: flex;
+      flex-direction: column;
+      padding: 41px 0 0;
+  }
   }
 
   &__image {
     @include option(max-width, 584px, 258px);
     width: 100%;
-    @include option(height, 439px, 194px);
+    @include option(margin, 0, 0 auto);
+    @include option(height, 439px, 196px);
 
     img {
       object-fit: contain;
@@ -25,20 +33,20 @@
   }
 
   &__title {
-    @include option(padding, 128px 0 0);
+    @include option(padding, 128px 0 0, 18px 4px 0 24px);
 
-    @include option(font-size, 40px);
+    @include option(font-size, 40px, 22px);
     @include option(font-weight, 700);
     text-transform: uppercase;
     color: $black;
   }
 
   &__text {
-    @include option(padding, 17px 0 0);
+    @include option(padding, 17px 0 0, 17px 24px 0);
 
-    @include option(font-size, 22px);
+    @include option(font-size, 22px, 16px);
     @include option(font-weight, 500);
-    @include option(line-height, 145%);
+    @include option(line-height, 145%, 150%);
     color: $grey500;
   }
 
@@ -46,28 +54,40 @@
     display: flex;
     justify-content: center;
     gap: 35px;
-    @include option(padding, 85px 0 0);
+    @include option(padding, 85px 0 0, 43px 0 0);
+    @include option(margin, 0, 0 0 0 -24px);
   }
 
   &__item {
     position: relative;
 
-    @include option(max-width, 350px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include option(max-width, 350px, 320px);
+    @include option(height, auto, 360px);
+    @include option(padding, 0, 17px 25px 25px);
 
     @include option(font-size, 16px);
     @include option(font-weight, 400);
     @include option(line-height, 150%);
     color: $grey800;
 
+    &_1,
+    &_2 {
+      display: none;
+    }
+
     &::before {
       content: "";
       display: block;
-      width: 40px;
-      height: 40px;
+      @include option(width, 40px, 28px);
+      @include option(height, 40px, 28px);
 
       position: absolute;
-      top: -49px;
-      left: -1px;
+      @include option(top, -49px, -42px);
+      @include option(left, -1px, 14px);
     }
 
     &_0::before {
@@ -81,12 +101,19 @@
     &_2::before {
       background-image: url("./../../public/images/icons/message.svg");
     }
+    
+    @media (max-width: $MIN-DESKTOP) {
+      background-color: $white;
+      border-top: 56px solid rgba(128, 77, 180, 0.16);
+      border-radius: 16px;
+      box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.08);
+    }
   }
 
   &__link {
     display: block;
-    @include option(max-width, 23vw);
-    @include option(margin, 23px 0 0 -2px);
+    @include option(max-width, 23vw, 271px);
+    @include option(margin, 0 0 0 -2px);
     @include option(padding, 12px 0);
 
     @include option(font-size, 16px);
