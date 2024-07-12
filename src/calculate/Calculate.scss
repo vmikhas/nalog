@@ -1,11 +1,15 @@
 .calculate {
   &__container {
-    @include container($DESKTOP, $PADDING-DESKTOP);
+    @include container($DESKTOP, 0);
+    @include option(padding, 0 45px, 0 16px);
   }
 
   &__wrapper {
-    @include option(margin, -139px 0 0);
-    @include option(padding, 0 40px);
+    position: relative;
+    z-index: 2;
+
+    @include option(margin, -139px 0 0, -227px 0 0);
+    @include option(padding, 0 40px, 0 17px);
 
     backdrop-filter: blur(32px);
     // background: radial-gradient(111.94% 141.42% at 0% 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
@@ -14,25 +18,27 @@
   }
 
   &__title {
-    @include option(margin, 0 305px 0 0);
-    @include option(padding, 32px 0 0);
+    position: relative;
+    z-index: 2;
+
+    @include option(padding, 32px 0 0, 24px 0 0);
 
     @include option(font-size, 22px);
     @include option(font-weight, 700);
+    @include option(text-align, start, center);
     text-transform: uppercase;
     color: $white;
   }
 
-  &__holder {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__image {
-    @include option(max-width, 330px);
+    position: absolute;
+    @include option(top, -20.8%, -15.7%);
+    @include option(right, 3.3%, 0.5%);
+    z-index: 1;
+
+    @include option(max-width, 330px, 169px);
     width: 100%;
-    @include option(max-height, 377px);
-    @include option(margin, -172px 0 0);
+    @include option(max-height, 377px, 193px);
 
     img {
       object-fit: contain;
@@ -40,15 +46,17 @@
   }
 
   &__form {
-    @include option(width, 740px);
-    @include option(padding, 16px 0 0);
+    position: relative;
+    z-index: 2;
+
+    @include option(padding, 16px 0 0, 16px 7px 0);
   }
 
   &__input {
-    @include option(max-width, 512px);
+    @include option(max-width, 512px, 296px);
     width: 100%;
     height: 48px;
-    @include option(margin, 0 16px 10px 0);
+    @include option(margin, 0 16px 0 0, 0 0 16px 0);
     @include option(padding, 0 20px);
 
     @include option(font-size, 16px);
@@ -68,7 +76,6 @@
     @include option(max-width, 208px, 296px);
     width: 100%;
     height: 48px;
-    @include option(margin, 0 0 120px 0);
     @include option(padding, 0 24px);
 
     @include option(font-size, 16px);
@@ -86,13 +93,12 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
-    @include option(margin, -141px 0 0);
-    @include option(padding, 25px 0 0);
+    @include option(padding, 25px 0 0, 25px 0 0 7px);
   }
 
   &__inner {
     display: flex;
-    gap: 33px;
+    @include option(gap, 33px, 19px);
   }
 
   &__term {
@@ -101,12 +107,12 @@
     @include option(line-height, 157%);
 
     &_1 {
-      @include option(margin, 0 0 0 117px);
+      @include option(margin, 0 0 0 117px, 0 0 0 51px);
     }
   }
 
   &__desc {
-    @include option(font-size, 32px);
+    @include option(font-size, 32px, 22px);
     @include option(font-weight, 700);
     text-transform: uppercase;
     color: $violet;
@@ -116,16 +122,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include option(height, 328px)
+    @include option(height, 328px, 462px)
   }
 
   &__carousel {
-    @include option(padding, 25px 0 0);
+    @include option(padding, 25px 0 0, 25px 7px 0);
   }
 
   &__carousel-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 6px;
     @include option(padding, 15px 0 0);
   }
@@ -163,7 +168,7 @@
   }
 
   &__footnote {
-    @include option(padding, 0 0 39px);
+    @include option(padding, 0 0 39px, 0 7px 23px);
 
     @include option(font-size, 10px);
     @include option(font-weight, 400);
