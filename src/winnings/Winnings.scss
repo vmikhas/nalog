@@ -1,20 +1,24 @@
 .winnings {
   &__container {
     @include container($DESKTOP, 0);
-    @include option(padding, 0 45px, 0 16px);
+    @include option(padding, 0 45px, 0 16px, 0 32px);
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 32px;
-    @include option(margin, -12px 0 0);
+    //display: grid;
+    //grid-template-columns: repeat(2, 1fr);
+    //column-gap: 32px;
+    display: flex;
+    @include option(flex-direction, row, column, row);
+    @include option(gap, 32px, 0, 27px);
+    @include option(margin, -12px 0 0, -12px 0 0, 5px 0 0);
+    @include option(padding, 0, 41px 0 0, 0 25px 0 51px);
 
-    @media (max-width: $TABLET) {
+    @media (max-width: $TABLET - 1) {
       display: flex;
       flex-direction: column;
       padding: 41px 0 0;
-  }
+    }
   }
 
   &__image {
@@ -29,11 +33,11 @@
   }
 
   &__inner {
-
+    @include option(width, 600px, auto, auto);
   }
 
   &__title {
-    @include option(padding, 128px 0 0, 18px 4px 0 24px);
+    @include option(padding, 128px 0 0, 18px 4px 0 24px, 28px 4px 0 24px);
 
     @include option(font-size, 40px, 22px);
     @include option(font-weight, 700);
@@ -52,10 +56,10 @@
 
   &__list {
     display: flex;
-    justify-content: center;
-    gap: 35px;
-    @include option(padding, 85px 0 0, 43px 0 0);
-    @include option(margin, 0, 0 0 0 -24px);
+    @include option(justify-content, center, flex-start);
+    @include option(gap, 34px, 35px, 16px);
+    //gap: 35px;
+    @include option(padding, 85px 0 0, 43px 0 0, 47px 0 0);
   }
 
   &__item {
@@ -66,15 +70,15 @@
     justify-content: space-between;
 
     @include option(max-width, 350px, 320px);
-    @include option(height, auto, 360px);
-    @include option(padding, 0, 17px 25px 25px);
+    @include option(min-height, auto, 360px);
+    @include option(padding, 0, 17px 25px 25px, 17px 25px 23px);
 
     @include option(font-size, 16px);
     @include option(font-weight, 400);
     @include option(line-height, 150%);
     color: $grey800;
 
-    &_1,
+    //&_1,
     &_2 {
       display: none;
     }
