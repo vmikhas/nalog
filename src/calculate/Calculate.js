@@ -1,7 +1,9 @@
 import parse from "html-react-parser";
 import Picture from "../constants/Picture";
+import { useState } from "react";
 
 export default function Calculate({ content }) {
+		const [active, setActive] = useState('average');
 
     return (
         <section className={"calculate"}>
@@ -33,11 +35,12 @@ export default function Calculate({ content }) {
                                 {content.carouselItems.map((carouselItem, id) =>
                                     <li className={`calculate__carousel-item calculate__carousel-item_${id}`}
                                         key={"item-" + id}>
-                                        <button className={"calculate__carousel-button"}
+                                        <button className={`calculate__carousel-button ${carouselItem.type === active ? 'calculate__carousel-button_active' : ''}`}
+																								onClick={() => setActive(carouselItem.type)}
                                                 type={"button"}>{carouselItem.number}</button>
                                     </li>)}
                             </ul>
-                            <p className={"calculate__carousel-desc"}>{parse(content.carouselDesc.average)}</p>
+                            <p className={"calculate__carousel-desc"}>{parse(content[active].desc)}</p>
                         </div>
                         <p className={"calculate__footnote"}>{content.calculateFootnote}</p>
                     </div>

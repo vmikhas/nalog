@@ -59,16 +59,22 @@
     	@include option(font-weight, 700);
 		text-align: center;
 		text-transform: uppercase;
-		text-decoration: none;
 		color: $violet;
 
 		border: 1px solid rgba(128, 77, 180, 0.16);
 		border-radius: 50%;
+		transition: 0.3s ease-in-out;
+
+		cursor: pointer;
 
 		&_active {
 			color: $white;
 
 			background-color: $violet;
+		}
+
+		&:hover {
+			scale: 1.2;
 		}
 	}
 
@@ -76,16 +82,16 @@
 		@include option(padding, 25px 0 0);
 
 		@include option(font-size, 22px, 16px);
-    	@include option(font-weight, 600);
+    @include option(font-weight, 600);
 		@include option(line-height, 109%, 150%);
 		color: $black;
 	}
 
 	&__desc {
-		@include option(padding, 24px 55px 0 0, 16px 0 0);
+		@include option(padding, 24px 35px 0 0, 16px 0 0);
 
 		@include option(font-size, 16px);
-    	@include option(font-weight, 400);
+    @include option(font-weight, 400);
 		@include option(line-height, 150%);
 		color: $grey800;
 

@@ -124,5 +124,16 @@
 
     background-color: $violet;
     border-radius: 8px;
+
+		transition: 0.2s ease-out;
+
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+		}
+
+		&:active {
+			opacity: 0.6;
+		}
   }
 }

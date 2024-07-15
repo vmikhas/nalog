@@ -45,6 +45,17 @@
 		border-radius: 8px;
 
 		cursor: pointer;
+
+		transition: 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			scale: 1.02;
+		}
+
+		&:active {
+			opacity: 0.8;
+		}
 	}
 
 	&__image {

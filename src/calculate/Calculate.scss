@@ -87,6 +87,17 @@
     border-radius: 8px;
 
     cursor: pointer;
+
+		transition: 0.3s ease;
+
+		&:hover,
+		&:focus {
+			scale: 1.05;
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
   }
 
   &__list {
@@ -150,10 +161,16 @@
     border-radius: 8px;
 
     cursor: pointer;
+		transition: 0.3s ease-in-out;
 
     &_active {
       background: rgba(128, 77, 180, 0.16);
+			border: 1px solid rgba(128, 77, 180, 0);
     }
+
+		&:hover {
+			opacity: 0.7;
+		}
   }
 
   &__carousel-desc {

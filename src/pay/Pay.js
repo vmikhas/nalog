@@ -14,7 +14,7 @@ export default function Pay({ content }) {
                         <ul className={"pay__list"}>
                             {content.paginations.map((pagination, id) =>
                                 <li className={"pay__item"} key={id}>
-                                    <button className={"pay__button"}
+                                    <button className={`pay__button ${pagination.type === active ? 'pay__button_active' : ''}`}
                                         onClick={() => setActive(pagination.type)}
                                         aria-label={"Первая страница"}>{pagination.number}</button>
                                 </li>)}

@@ -12,6 +12,17 @@
 		display: block;
 		@include option(width, 196px, 168px);
 		@include option(height, 40px, 34px);
+
+		transition: 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			scale: 1.05;
+		}
+
+		&:active {
+			opacity: 0.6;
+		}
 	}
 
 	&__title {
