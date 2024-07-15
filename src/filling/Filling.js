@@ -10,7 +10,7 @@ export default function Filling({ image, button, title, desc, info, subtitle, te
 					<button className={"filling__button"} type={"button"}>{button}</button>
 				</div>
 				<div className={"filling__wrapper"}>
-					<h2 className={"filling__title"}>{title}</h2>
+					<h2 className={"filling__title"}>{parse(title)}</h2>
 					<p className={"filling__desc"}>{parse(desc)}</p>
 					<p className={"filling__info"}>{parse(info)}</p>
 					<div className={"filling__box"}>

@@ -95,7 +95,7 @@ export const payContent = {
     desc: {
         write: '<p class="pay__desc_p">Это можно сделать в личном кабинете на <a class="pay__link" href="https://lkfl2.nalog.ru/lkfl" target="_blank">сайте ФНС.</a></p>' +
             '<p class="pay__desc_p">Или скачайте бланк <a class="pay__link" href="https://www.nalog.gov.ru/html/sites/www.new.nalog.ru/docs/nalogi/ndfl/forms/3ndfl2017.pdf" target="_blank">здесь</a>, распечатайте и заполните от руки.</p>' +
-            '<p class="pay__desc_p">Если боитесь ошибиться, скачайте <a class="pay__link" href="https://www.nalog.gov.ru/rn77/program/5961249/" target="_blank">программу-помощник по&nbsp;заполнению 3-НДФЛ</a>. Ответите&nbsp;на несколько вопросов — программа сформирует декларацию.</p>' +
+            '<p class="pay__desc_p">Если боитесь ошибиться, скачайте <a class="pay__link" href="https://www.nalog.gov.ru/rn77/program/5961249/" target="_blank">программу-помощник по&nbsp;заполнению <span>3-НДФЛ</span></a>. Ответите&nbsp;на несколько вопросов — программа сформирует декларацию.</p>' +
             '<p>Помимо информации о выигрыше в декларации нужно будет рассказать обо всех источниках дохода, которые были у вас за этот год.</p>',
 
         submit: 'Электронный документ можно отправить в налоговую в личном кабинете сразу после его заполнения. Если вы заполняли форму от руки, бумажный бланк придётся отнести в <a class="pay__link" href="#">отделение налоговой по месту жительства</a>. Приготовьте два экземпляра документа.',
@@ -121,8 +121,8 @@ export const fillingContent = {
         }
     },
 		button: 'Посмотреть образцы',
-    title: 'Как заполнить бланк декларации',
-    desc: 'Мы приготовили для вас подробную инструкцию. Откройте бланки <span class="filling__desc filling__desc_v">слева</span><span class="filling__desc filling__desc_vm">снизу</span>, чтобы&nbsp;посмотреть подсказки для&nbsp;каждой&nbsp;страницы.',
+    title: 'Как заполнить<br class="filling__br-tablet"/> бланк декларации',
+    desc: 'Мы приготовили для вас<br class="filling__br-tablet"/> подробную инструкцию. Откройте бланки <span class="filling__desc filling__desc_v">слева</span><span class="filling__desc filling__desc_vm">снизу</span>, чтобы&nbsp;посмотреть подсказки для&nbsp;каждой&nbsp;страницы.',
     info: 'Я заполняю декларацию в&nbsp;специальной программе<button class="filling__button-icon" href="#" aria-label="Пояснение"><img class="filling__icon" src="./images/icons/question.svg" alt="Знак вопроса"></button>',
     subtitle: {
         submit: 'Подать до 30 апреля',
@@ -132,7 +132,7 @@ export const fillingContent = {
         submit: 'Если это выходной, то до первого рабочего дня после 30 апреля.',
         pay: 'Если это выходной, то до первого рабочего дня после 15 июля.'
     },
-    footnote: 'Например, если вы выиграли в&nbsp;2022&nbsp;году, успейте подать<br class="filling__br-v"/> 3-НДФЛ до&nbsp;2 мая 2023 года, а оплатить налог — до 17 июля 2023 года, потому что и&nbsp;30&nbsp;апреля, и 15 июля в 2023 году будут выходными.'
+    footnote: 'Например, если вы выиграли в&nbsp;2022&nbsp;году, успейте подать<br class="filling__br-v"/> 3-НДФЛ до&nbsp;2 мая 2023 года, а&nbsp;оплатить налог — до 17 июля 2023 года, потому что и&nbsp;30&nbsp;апреля, и 15 июля в 2023 году&nbsp;будут выходными.'
 }
 
 export const residentContent = {

@@ -5,9 +5,6 @@
   }
 
   &__wrapper {
-    //display: grid;
-    //grid-template-columns: repeat(2, 1fr);
-    //column-gap: 32px;
     display: flex;
     @include option(flex-direction, row, column, row);
     @include option(gap, 32px, 0, 27px);
@@ -58,7 +55,6 @@
     display: flex;
     @include option(justify-content, center, flex-start);
     @include option(gap, 34px, 35px, 16px);
-    //gap: 35px;
     @include option(padding, 85px 0 0, 43px 0 0, 47px 0 0);
   }
 
@@ -78,7 +74,7 @@
     @include option(line-height, 150%);
     color: $grey800;
 
-    //&_1,
+    &_1,
     &_2 {
       display: none;
     }

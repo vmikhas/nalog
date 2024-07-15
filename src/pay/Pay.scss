@@ -4,7 +4,7 @@
 
 	&__container {
 		@include container($DESKTOP, 0);
-		@include option(padding, 0 53px 0 85px, 0 40px, 0 56px);
+		@include option(padding, 0 53px 0 85px, 0 40px, 0 65px 0 56px);
 	}
 
 	&__title {
@@ -97,6 +97,10 @@
 	&__link {
 		text-decoration: none;
 		color: $blue;
+
+		span {
+			white-space: nowrap;
+		}
 	}
 
 	&__image {

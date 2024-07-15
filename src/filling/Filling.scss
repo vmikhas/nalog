@@ -4,32 +4,32 @@
 
 		display: flex;
 		justify-content: space-between;
+		@include option(gap, 0, 0, 40px);
 		@include container($DESKTOP, 0);
-		@include option(padding, 106px 85px 0, 67px 40px 0);
+		@include option(padding, 106px 85px 0, 67px 40px 0, 77px 40px 0);
 	}
 
 	&__inner {
+		position: relative;
+
+		@include option(display, flex, block, flex);
+		@include option(min-width, auto, 295px, 314px);
+		@include option(height, auto, 429px, auto);
+		@include option(margin, 0, 0, 0 0 0 -2px);
+		@include option(padding, 0, 0, 28px 0 0);
+	
 		@media (max-width: $TABLET - 1) {
 			position: absolute;
 			top: 30.7%;
 			left: 50%;
 			transform: translateX(-50%);
-
-			width: 295px;
-			height: 429px;
-		}
-
-		@media (min-width: $TABLET) {
-			position: relative;
-
-			display: flex;
 		}
 	}
 
 	&__button {
 		position: absolute;
-		top: 50%;
-		@include option(left, 50%, 40%);
+		@include option(top, 50%, 50%, 43.2%);
+		@include option(left, 50%, 40%, 48%);
 		transform: translate(-37.2%, -50%);
 
 		@include option(max-width, 271px, 226px);
@@ -48,7 +48,7 @@
 	}
 
 	&__image {
-		@include option(max-width, 480px, 295px);
+		@include option(max-width, 480px, 295px, 314px);
 		width: 100%;
 		@include option(max-height, 597px, 429px);
 
@@ -58,7 +58,7 @@
 	}
 
 	&__wrapper {
-		@include option(max-width, 590px);
+		@include option(max-width, 590px, auto, auto);
 		@include option(padding, 1px 0 0 46px, 0);
 	}
 
@@ -78,6 +78,14 @@
 		@include option(color, $grey500, $grey600);
 	}
 
+	&__br-tablet {
+		display: none;
+
+		@media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
+			display: block;
+		}
+	}
+
 	&__desc_v {
 		@media (max-width: $TABLET - 1) {
 			display: none;
@@ -94,7 +102,7 @@
 		display: flex;
 		align-items: center;
 		@include option(padding, 11px, 12px 11px 10px);
-		@include option(margin, 0 54px 33px 0, 0 32px 495px 0);
+		@include option(margin, 0 54px 33px 0, 0 32px 495px 0, 0 78px 17px 0);
 
 		@include option(font-size, 16px, 14px);
 		@include option(font-weight, 400);
