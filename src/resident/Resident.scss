@@ -1,5 +1,5 @@
 .resident {
-  @include option(margin, 77px 0 0, 27px 0 0);
+  @include option(margin, 77px 0 0, 27px 0 0, 47px 0 0);
 
   background-color: $grey200;
 
@@ -7,7 +7,12 @@
     @include container($DESKTOP, 0);
     display: flex;
     @include option(flex-direction, row, column-reverse);
-    @include option(padding, 58px 85px 50px, 30px 38px 39px 40px);
+    @include option(padding, 58px 85px 50px, 30px 38px 39px 40px, 36px 56px 80px);
+
+    @media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
+      display: grid;
+      grid-template-columns: 1fr max-content;
+    }
   }
 
   &__wrapper {
@@ -24,7 +29,7 @@
   }
 
   &__desc {
-    @include option(padding, 17px 100px 0 0, 24px 0 0);
+    @include option(padding, 17px 100px 0 0, 24px 0 0, 17px 80px 0 0);
 
     @include option(font-size, 16px);
     @include option(font-weight, 400);
@@ -33,12 +38,12 @@
   }
 
   &__inner {
-    @include option(margin, auto);
+    @include option(margin, auto, auto, 5px 40px 0 0);
   }
 
   &__image {
-    @include option(max-width, 381px, 180px);
-    width: 100%;
-    @include option(max-height, 356px, 161px);
+    @include option(max-width, 381px, 180px, 232px);
+    // width: 100%;
+    @include option(max-height, 356px, 161px, 207px);
   }
 }

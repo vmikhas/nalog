@@ -24,7 +24,7 @@ function App() {
             <Header {...headerContent} />
             <Calculate content={calculateContent} />
             <Winnings {...winningsContent} />
-            <Pay {...payContent} />
+            <Pay content={payContent} />
             <Filling {...fillingContent} />
             <Resident {...residentContent} />
             <Cases {...casesContent} />

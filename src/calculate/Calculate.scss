@@ -12,6 +12,7 @@
     @include option(padding, 0 40px, 0 17px);
 
     backdrop-filter: blur(32px);
+    // background: linear-gradient(180deg, rgb(248, 248, 248), rgb(255, 255, 255) 100%);
     // background: radial-gradient(111.94% 141.42% at 0% 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
     border-radius: 16px;
     box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.12);
@@ -32,13 +33,12 @@
 
   &__image {
     position: absolute;
-    @include option(top, -20.8%, -13.7%);
-    @include option(right, 3.3%, 0.5%);
+    @include option(top, -20.8%, -13.7%, -17.8%);
+    @include option(right, 3.3%, 0.5%, -7.3%);
     z-index: 1;
 
-    @include option(max-width, 330px, 169px);
+    @include option(max-width, 330px, 169px, 241px);
     width: 100%;
-    @include option(max-height, 377px, 193px);
 
     img {
       object-fit: contain;
@@ -133,6 +133,7 @@
     display: flex;
     gap: 6px;
     @include option(padding, 15px 0 0);
+    white-space: nowrap;
   }
 
   &__carousel-button {

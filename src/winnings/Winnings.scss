@@ -54,7 +54,7 @@
   &__list {
     display: flex;
     @include option(justify-content, center, flex-start);
-    @include option(gap, 34px, 35px, 16px);
+    @include option(gap, 34px, 16px, 16px);
     @include option(padding, 85px 0 0, 43px 0 0, 47px 0 0);
   }
 
@@ -74,10 +74,10 @@
     @include option(line-height, 150%);
     color: $grey800;
 
-    &_1,
-    &_2 {
-      display: none;
-    }
+    // &_1,
+    // &_2 {
+    //   display: none;
+    // }
 
     &::before {
       content: "";

@@ -3,10 +3,10 @@
 
   &__container {
     display: grid;
-    @include option(grid-template-columns, 1fr 1fr, 1fr);
-    @include option(column-gap, 35px, 0);
+    @include option(grid-template-columns, 1fr 1fr, 1fr, 1fr 1fr);
+    @include option(column-gap, 35px, 0, 17px);
     @include container($DESKTOP, 0);
-    @include option(padding, 0 85px 75px, 0 40px 43px);
+    @include option(padding, 0 85px 75px, 0 40px 43px, 0 56px 43px);
 
     @include option(font-size, 12px);
     @include option(font-weight, 400);
@@ -27,8 +27,22 @@
     @include option(padding, 24px 0 0);
   }
 
+  &__br-tablet {
+    @media (max-width: $TABLET - 1) {
+      display: none;
+    }
+  }
+
+  &__br-tablet-min {
+    display: none;
+
+    @media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
+      display: block;
+    }
+  }
+
   &__br-desktop {
-    @media (max-width: $MIN-DESKTOP) {
+    @media (max-width: $MIN-DESKTOP - 1) {
       display: none;
     }
   }
@@ -36,7 +50,7 @@
   &__social-list {
     display: flex;
     gap: 24px;
-    @include option(padding, 24px 0 0, 32px 0 0);
+    @include option(padding, 24px 0 0, 32px 0 0, 18px 0 0);
   }
 
   &__social-item {
@@ -84,11 +98,11 @@
   }
 
   &__inner {
-    @include option(padding, 42px 0 0 95px, 61px 0 0);
+    @include option(padding, 42px 0 0 95px, 61px 0 0, 42px 0 0);
   }
 
   &__ass {
-    @include option(padding, 32px 0 0, 27px 0 0);
+    @include option(padding, 32px 0 0, 27px 0 0, 17px 0 0);
   }
 
   &__org-list,
