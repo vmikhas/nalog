@@ -14,7 +14,7 @@ export const calculateContent = {
 		image: {
 			sources: [],
 			imgAttr: {
-					src: './images/wallet.png',
+					src: './images/wallet_d@1.5x.png',
 					alt: 'Кошелек'
 			}
 	},
@@ -61,8 +61,8 @@ export const winningsContent = {
     image: {
         sources: [],
         imgAttr: {
-            src: './images/auto.png',
-            alt: 'Машинка'
+            src: './images/auto_d@1.5x.png',
+            alt: 'Картинка машины'
         }
     },
 //     image: {
@@ -114,8 +114,8 @@ export const payContent = {
     image: {
         sources: [],
         imgAttr: {
-            src: './images/laptop.png',
-            alt: 'Ноутбук'
+            src: './images/laptop_d@1.5x.png',
+            alt: 'Картинка ноутбука'
         }
     },
 }
@@ -124,7 +124,7 @@ export const fillingContent = {
     image: {
         sources: [],
         imgAttr: {
-            src: './images/forms.png',
+            src: './images/forms_d@1.5x.png',
             alt: 'Бланки декларации по форме 3-НДФЛ'
         }
     },
@@ -151,8 +151,8 @@ export const residentContent = {
     image: {
         sources: [],
         imgAttr: {
-            src: './images/planet_earth.png',
-            alt: 'Бланки декларации по форме 3-НДФЛ'
+            src: './images/planet_d@1.5x.png',
+            alt: 'Картинка планеты Земля'
         }
     }
 }
@@ -161,7 +161,7 @@ export const casesContent = {
     image: {
         sources: [],
         imgAttr: {
-            src: './images/gift.png',
+            src: './images/gift_d@1.5x.png',
             alt: 'Картинка подарка'
         }
     },
@@ -231,22 +231,22 @@ export const footerContent = {
     ],
     organizations: [
         {imgAttr: {
-                src: './images/min_sporta.png',
+                src: './images/min_sporta@1.5x.png',
                 alt: 'Логотип Министерство спорта РФ'
             }},
         {imgAttr: {
-                src: './images/min_fin.png',
+                src: './images/min_fin@1.5x.png',
                 alt: 'Логотип Министерство финансов РФ'
             }}
     ],
     orgText: 'Организаторами лотерей являются Министерство спорта РФ<br class="footer__br-tablet-min" /> и&nbsp;Министерство финансов РФ.',
     associations: [
         {imgAttr: {
-                src: './images/world_ass.png',
+                src: './images/world_ass@1.5x.png',
                 alt: 'Логотип Всемирной лотерейной ассоциации'
             }},
         {imgAttr: {
-                src: './images/europe_ass.png',
+                src: './images/europe_ass@1.5x.png',
                 alt: 'Логотип Европейской лотерейной ассоциации'
             }}
     ],
