@@ -179,17 +179,27 @@ export const mapContent = {
     mapImage: {
         sources: [],
         imgAttr: {
-						class: 'map__image-world',
+			class: 'map__image-world',
             src: './images/map.svg',
             alt: 'Карта мира'
         }
     },
-    mapIcon: {
-        imgAttr: {
-            src: './images/icons/dot.svg',
-            alt: 'Точка на карте'
-        }
-    }
+	dots:[
+		{icon: '', type: 'usa'},
+		{icon: '', type: 'india'},
+		{icon: '', type: 'europe'},
+		{icon: '', type: 'russia'},
+		{icon: '', type: 'taiwan'},
+	],
+	usa: '<b class="map__subtitle">США:</b> В Америке победителю лотереи придётся заплатить дважды: сначала счастливчик должен будет государству 25 % федерального налога, а затем ещё до 13 % налогов штата. В каждом штате — свой процент.',
+	india: '<b class="map__subtitle">Индия:</b> 31,2 % на выигрыши от 10 000 ₹',
+	europe: '<b class="map__subtitle">Португалия:</b> 20 % на выигрыши свыше 5000 €' +
+			'<p><b class="map__subtitle">Испания:</b> 20 % на выигрыши свыше 2500 €</p>' +
+			'<p><b class="map__subtitle">Швейцария:</b> 35 % на выигрыши выше 1000 ₣</p>' +
+			'<p><b class="map__subtitle">Нидерланды:</b> 29 % на выигрыши от 499 €</p>' +
+			'<p><b class="map__subtitle">Италия:</b> 20 % на выигрыши от 500 €</p>',
+	russia: '<b class="map__subtitle">Россия:</b> 13 % на выигрыши от 4000 ₽ и 15 % на выигрыши от 5 000 001 ₽',
+	taiwan: '<b class="map__subtitle">Тайвань:</b> 20 % на выигрыши от 5000 NT$',
 }
 
 export const footerContent = {

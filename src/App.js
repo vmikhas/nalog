@@ -28,7 +28,7 @@ function App() {
             <Filling {...fillingContent} />
             <Resident {...residentContent} />
             <Cases {...casesContent} />
-            <Map {...mapContent} />
+            <Map content={mapContent} />
             <Footer {...footerContent} />
         </div>
     );

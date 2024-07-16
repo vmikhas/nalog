@@ -74,10 +74,10 @@
     @include option(line-height, 150%);
     color: $grey800;
 
-    &_1,
-    &_2 {
-      display: none;
-    }
+    // &_1,
+    // &_2 {
+    //   display: none;
+    // }
 
     &::before {
       content: "";

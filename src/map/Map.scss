@@ -42,49 +42,107 @@
     @include option(height, 554px, 145px, 327px);
 
     object-fit: contain;
+
+		&_active {
+			&.usa {
+				fill: #804DB4;
+				fill-opacity: 0.16;
+			}
+		}
 	}
 
-  &__icon {
+  &__item {
     position: absolute;
-
-    @include option(width, 24px);
-    @include option(height, 24px);
     transform: translate(-50%, -50%);
 
-    &_usa {
+    &_0 {
       @include option(top, 42.6%, 36.8%, 39.5%);
       @include option(left, 18.6%, 20%, 19%);
     }
 
-    &_india {
+    &_1 {
       @include option(top, 51.1%, 44%, 48.1%);
       @include option(left, 69%, 70%, 68.6%);
     }
 
-    &_europe {
+    &_2 {
       @include option(top, 38.2%, 33%, 34.5%);
       @include option(left, 48.6%, 50.5%, 49%);
     }
 
-    &_russia {
+    &_3 {
       @include option(top, 27.3%, 25.8%, 24.4%);
       @include option(left, 73.89%, 75.5%, 73.7%);
     }
 
-    &_taiwan {
+    &_4 {
       @include option(top, 51.2%, 42.3%, 47.8%);
       @include option(left, 80.4%, 81.3%, 80.3%);
     }
   }
 
-  &__button {
+  &__tooltip {
     @include option(width, 24px, 16px, 24px);
     @include option(height, 24px, 16px, 24px);
     padding: 0;
 
     background-color: transparent;
+	background-image: url("./../../public/images/icons/dot.svg");
+	@include option(background-size, 24px 24px, 16px 16px, 24px 24px);
+	background-position: center;
+	background-repeat: no-repeat;
     border: none;
 
     cursor: pointer;
+
+	&:hover,
+	&:focus {
+		@include option(width, 36px, 24px, 36px);
+		@include option(height, 36px, 24px, 36px);
+
+		background-image: url("./../../public/images/icons/dot_hovered.svg");
+		@include option(background-size, 36px 36px, 24px 24px, 36px 36px);
+	}
+  }
+
+  &__tooltip-text {
+	position: absolute;
+	bottom: 135%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	display: none;
+	@include option(width, 417px);
+	@include option(padding, 12px);
+
+	@include option(font-size, 16px);
+	@include option(font-weight, 400);
+	@include option(line-height, 150%);
+	color: $black;
+
+	background-color: $white;
+	border-radius: 16px;
+	box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.24);
+
+	&::before {
+		content: "";
+		display: block;
+		@include option(width, 11px);
+		@include option(height, 10px);
+
+		background-image: url("./../../public/images/icons/corner.svg");
+		background-size: 11px 10px;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		position: absolute;
+		bottom: -9px;
+		@include option(left, 50%);
+		transform: translateX(-50%);
+	}
+
+	&_active {
+		display: block;
+	}
   }
 }
