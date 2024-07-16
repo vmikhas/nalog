@@ -124,22 +124,77 @@
 		border-radius: 8px;
 	}
 
-	&__button-icon {
-		@include option(margin, 0 0 0 6px);
+	&__tooltip {
+		position: relative;
 
 		@include option(width, 20px, 38px);
 		height: 20px;
-		padding: 0;
+		@include option(margin, 0 0 0 6px, -2px 0 0);
+		@include option(padding, 0, 0 0 0 2px);
 
+		background-image: url("./../../public/images/icons/question.svg");
+		background-size: 20px 20px;
+		background-repeat: no-repeat;
 		background-color: transparent;
 		border: none;
 
 		cursor: pointer;
+
+		transition: 0.2s ease-in-out;
+
+		&_active {
+			background-image: url("./../../public/images/icons/close.svg");
+		}
+
+		&:hover,
+		&:focus {
+			
+		}
 	}
 
-	&__icon {
-		width: 20px;
-		height: 20px;
+	&__tooltip-text {
+		position: absolute;
+		@include option(bottom, 160%);
+		@include option(right, -10%, 0);
+		transform: translateX(30px);
+
+		display: none;
+		@include option(width, 400px, 248px);
+		@include option(padding, 12px);
+
+		@include option(font-size, 16px, 14px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%, 157%);
+		text-align: start;
+		color: $black;
+
+		background-color: $white;
+		border-radius: 16px;
+		box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.24);
+
+		p {
+			@include option(padding, 10px 0 0,);
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			@include option(width, 11px);
+			@include option(height, 10px);
+
+			background-image: url("./../../public/images/icons/corner.svg");
+			background-size: 11px 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			position: absolute;
+			bottom: -9px;
+			right: 37px;
+		}
+
+		&_active {
+			display: block;
+		}
 	}
 
 	&__box {

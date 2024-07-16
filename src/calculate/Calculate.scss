@@ -133,7 +133,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include option(height, 328px, 462px, 318px)
+    @include option(min-height, 328px, 462px, 318px)
   }
 
   &__carousel {
@@ -144,7 +144,7 @@
     display: flex;
     gap: 6px;
     @include option(padding, 15px 0 0);
-    white-space: nowrap;
+    // white-space: nowrap;
   }
 
   &__carousel-button {

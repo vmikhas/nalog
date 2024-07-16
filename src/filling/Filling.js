@@ -1,7 +1,13 @@
+import { useState } from "react";
 import Picture from "../constants/Picture";
 import parse from "html-react-parser";
 
-export default function Filling({ image, button, title, desc, info, subtitle, text, footnote }) {
+export default function Filling({ image, button, title, desc, info, tooltip, subtitle, text, footnote }) {
+	const [open, setOpen] = useState(false);
+	const toggleTooltip = () => {
+		setOpen(p => !p);
+	};
+
 	return (
 		<section className={"filling"}>
 			<div className={"filling__container"}>
@@ -12,7 +18,14 @@ export default function Filling({ image, button, title, desc, info, subtitle, te
 				<div className={"filling__wrapper"}>
 					<h2 className={"filling__title"}>{parse(title)}</h2>
 					<p className={"filling__desc"}>{parse(desc)}</p>
-					<p className={"filling__info"}>{parse(info)}</p>
+					<p className={"filling__info"}>{parse(info)}
+						<button class={`filling__tooltip ${open ? 'filling__tooltip_active' : ''}`} 
+								onClick={toggleTooltip}
+								type={"button"} 
+								aria-label={"Пояснение"}>
+									<span className={`filling__tooltip-text ${open ? 'filling__tooltip-text_active' : ''}`}>{parse(tooltip)}</span>
+						</button>
+					</p>
 					<div className={"filling__box"}>
 						<h3 className={"filling__subtitle"}>{subtitle.submit}</h3>
 						<p className={"filling__text"}>{text.submit}</p>

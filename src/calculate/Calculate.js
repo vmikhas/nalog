@@ -36,7 +36,7 @@ export default function Calculate({ content }) {
                                     <li className={`calculate__carousel-item calculate__carousel-item_${id}`}
                                         key={"item-" + id}>
                                         <button className={`calculate__carousel-button ${carouselItem.type === active ? 'calculate__carousel-button_active' : ''}`}
-																								onClick={() => setActive(carouselItem.type)}
+												onClick={() => setActive(carouselItem.type)}
                                                 type={"button"}>{carouselItem.number}</button>
                                     </li>)}
                             </ul>
