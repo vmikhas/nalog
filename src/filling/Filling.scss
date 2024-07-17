@@ -20,7 +20,7 @@
 	
 		@media (max-width: $TABLET - 1) {
 			position: absolute;
-			top: 30.7%;
+			top: 30.9%;
 			left: 50%;
 			transform: translateX(-50%);
 		}
@@ -28,7 +28,7 @@
 
 	&__button {
 		position: absolute;
-		@include option(top, 50%, 50%, 43.2%);
+		@include option(top, 50%, 49.5%, 43.2%);
 		@include option(left, 50%, 40%, 48%);
 		transform: translate(-37.2%, -50%);
 
@@ -50,7 +50,7 @@
 
 		&:hover,
 		&:focus {
-			scale: 1.02;
+			scale: 1.01;
 		}
 
 		&:active {

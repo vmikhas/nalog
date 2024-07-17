@@ -38,11 +38,12 @@
   }
 
   &__inner {
-    @include option(margin, auto, auto, 5px 40px 0 0);
+    @include option(margin, auto, auto, 5px 35px 0 0);
+	@include option(padding, 0, 0 0 0 10px, 0);
   }
 
   &__image {
-    @include option(max-width, 381px, 180px, 232px);
+    @include option(max-width, 381px, 190px, 237px);
     // width: 100%;
     @include option(max-height, 356px, 161px, 207px);
   }

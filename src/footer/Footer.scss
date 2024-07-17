@@ -120,7 +120,7 @@
   }
 
   &__inner {
-    @include option(padding, 42px 0 0 95px, 61px 0 0, 42px 0 0);
+    @include option(padding, 42px 0 0 95px, 58px 0 0, 40px 0 0);
   }
 
   &__ass {
@@ -154,7 +154,7 @@
   }
 
   &__org-text {
-    @include option(padding, 13px 0 0);
+    @include option(padding, 13px 0 0, 16px 0 0, 15px 0 0);
   }
 
   &__ass-text {

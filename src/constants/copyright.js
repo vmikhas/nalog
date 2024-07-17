@@ -297,14 +297,6 @@ export const casesContent = {
 export const mapContent = {
     title: 'Налоги в других странах',
     desc: 'Победителям из России повезло: во многих других странах налог на&nbsp;выигрыш — выше. Наша&nbsp;интерактивная карта покажет, где&nbsp;выигрывать выгоднее.',
-    mapImage: {
-        sources: [],
-        imgAttr: {
-			class: 'map__image-world',
-            src: './images/map.svg',
-            alt: 'Карта мира'
-        }
-    },
 	dots:[
 		{icon: '', type: 'usa'},
 		{icon: '', type: 'india'},
@@ -312,14 +304,14 @@ export const mapContent = {
 		{icon: '', type: 'russia'},
 		{icon: '', type: 'taiwan'}
 	],
-	usa: '<b class="map__subtitle">США:</b> В Америке победителю лотереи придётся заплатить дважды: сначала счастливчик должен будет государству 25 % федерального налога, а затем ещё до 13 % налогов штата. В каждом штате — свой процент.',
-	india: '<b class="map__subtitle">Индия:</b> 31,2 % на выигрыши от 10 000 ₹',
-	europe: '<b class="map__subtitle">Португалия:</b> 20 % на выигрыши свыше 5000 €' +
+	usa: '<b class="map__subtitle">США:</b> В Америке победителю лотереи придётся заплатить дважды: сначала счастливчик должен будет государству 25&nbsp;% федерального налога, а&nbsp;затем ещё до 13 % налогов штата. В каждом штате — свой процент.',
+	india: '<b class="map__subtitle">Индия:</b> 31,2 % на выигрыши от&nbsp;10 000 ₹',
+	europe: '<b class="map__subtitle">Португалия:</b> 20 % на&nbsp;выигрыши свыше 5000 €' +
 			'<p><b class="map__subtitle">Испания:</b> 20 % на выигрыши свыше 2500 €</p>' +
-			'<p><b class="map__subtitle">Швейцария:</b> 35 % на выигрыши выше 1000 ₣</p>' +
-			'<p><b class="map__subtitle">Нидерланды:</b> 29 % на выигрыши от 499 €</p>' +
-			'<p><b class="map__subtitle">Италия:</b> 20 % на выигрыши от 500 €</p>',
-	russia: '<b class="map__subtitle">Россия:</b> 13 % на выигрыши от 4000 ₽ и 15 % на выигрыши от 5 000 001 ₽',
+			'<p><b class="map__subtitle">Швейцария:</b> 35 % на&nbsp;выигрыши выше 1000 ₣</p>' +
+			'<p><b class="map__subtitle">Нидерланды:</b> 29 % на&nbsp;выигрыши от 499 €</p>' +
+			'<p><b class="map__subtitle">Италия:</b> 20 % на выигрыши от&nbsp;500 €</p>',
+	russia: '<b class="map__subtitle">Россия:</b> 13 % на выигрыши от&nbsp;4000 ₽ и&nbsp;15&nbsp;%&nbsp;на&nbsp;выигрыши от 5 000 001 ₽',
 	taiwan: '<b class="map__subtitle">Тайвань:</b> 20 % на выигрыши от 5000 NT$',
 }
 

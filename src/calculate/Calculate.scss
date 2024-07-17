@@ -138,6 +138,12 @@
 
   &__carousel {
     @include option(padding, 25px 0 0, 25px 7px 0);
+
+	.swiper-slide {
+		width: auto;
+		// @include option(margin, 0, 0 6px 0 0, 0);
+		@include option(padding, 0, 16px 0 0, 0);
+	}
   }
 
   &__carousel-list {

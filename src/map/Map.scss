@@ -34,7 +34,7 @@
     justify-content: center;
     @include option(max-width, 1122px, 295px, 656px);
     margin: 0 auto;
-    @include option(padding, 58px 0 54px 4px, 25px 0 70px 0, 20px 0 42px 0);
+    @include option(padding, 58px 0 56px 4px, 25px 0 70px 0, 20px 0 45px 0);
   }
 
 	&__image-world {
@@ -53,6 +53,7 @@
 
   &__item {
     position: absolute;
+	z-index: 1;
     transform: translate(-50%, -50%);
 
     &_0 {
@@ -107,22 +108,26 @@
 
   &__tooltip-text {
 	position: absolute;
-	bottom: 135%;
+	@include option(bottom, 135%, 150%);
 	left: 50%;
 	transform: translateX(-50%);
 
 	display: none;
-	@include option(width, 417px);
-	@include option(padding, 12px);
+	@include option(width, 417px, 248px);
+	@include option(padding, 12px, 12px 13px);
 
-	@include option(font-size, 16px);
+	@include option(font-size, 16px, 14px);
 	@include option(font-weight, 400);
-	@include option(line-height, 150%);
+	@include option(line-height, 150%, 157%);
 	color: $black;
 
 	background-color: $white;
 	border-radius: 16px;
 	box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.24);
+
+	p {
+		@include option(padding, 10px 0 0, 6px 0 0);
+	}
 
 	&::before {
 		content: "";
@@ -141,8 +146,93 @@
 		transform: translateX(-50%);
 	}
 
+	&_0 {
+		@include option(left, 50%, 240%, 50%);
+		z-index: 2;
+
+		&::before {
+			@include option(left, 50%, 37.5%, 50%);
+		}
+	}
+
+	&_1 {
+		z-index: 3;
+	}
+
+	&_2 {
+		z-index: 2;
+	}
+
+	&_3 {
+		@include option(left, 50%, -15%, 50%);
+		z-index: 2;
+
+		&::before {
+			@include option(left, 50%, 54%, 50%);
+		}
+	}
+
+	&_4 {
+		@include option(left, 50%, -120%, 50%);
+		z-index: 2;
+
+		&::before {
+			@include option(left, 50%, 61%, 50%);
+		}
+	}
+
 	&_active {
 		display: block;
+		
+		.map__image-world {
+			.usa {
+				fill: $violet;
+				fill-opacity: 0.16;
+			}
+
+			.usa-border {
+				fill: $violet;
+			}
+		}
+
+		.map__image-world {
+			.india {
+				fill: $violet;
+				fill-opacity: 0.16;
+				stroke: $violet;
+			}
+		}
+
+		.map__image-world {
+			.europe {
+				fill: $violet;
+				fill-opacity: 0.16;
+				stroke: $violet;
+			}
+
+			.europe-border {
+				fill: $violet;
+			}
+		}
+
+		.map__image-world {
+			.russia {
+				fill: $violet;
+				fill-opacity: 0.16;
+			}
+
+			.russia-border {
+				fill: $violet;
+			}
+		}
+
+		.map__image-world {
+			.taiwan {
+				fill: $violet;
+				fill-opacity: 0.16;
+				stroke: $violet;
+			}
+		}
 	}
   }
 }

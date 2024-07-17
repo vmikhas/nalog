@@ -2,14 +2,18 @@
   &__container {
     @include container($DESKTOP, 0);
     @include option(padding, 0 45px, 0 16px, 0 32px);
+
+	.swiper {
+		overflow: visible;
+	}
   }
 
   &__wrapper {
     display: flex;
     @include option(flex-direction, row, column, row);
-    @include option(gap, 32px, 0, 27px);
-    @include option(margin, -12px 0 0, -12px 0 0, 5px 0 0);
-    @include option(padding, 0, 41px 0 0, 0 25px 0 51px);
+    @include option(gap, 32px, 0, 23px);
+    @include option(margin, -12px 0 0, -12px 0 0, 0);
+    @include option(padding, 0, 41px 0 0, 0 20px 0 53px);
 
     @media (max-width: $TABLET - 1) {
       display: flex;
@@ -19,10 +23,10 @@
   }
 
   &__image {
-    @include option(max-width, 584px, 258px);
-    width: 100%;
-    @include option(margin, 0, 0 auto);
-    @include option(height, 439px, 196px);
+	  @include option(max-width, 584px, 258px, 260px);
+	  width: 100%;
+	  @include option(height, 439px, 196px, 211px);
+	  @include option(margin, 0, 0 auto);
 
     img {
       object-fit: contain;
@@ -31,10 +35,11 @@
 
   &__inner {
     @include option(width, 600px, auto, auto);
+	@include option(padding, 0, 0 0 43px, 0);
   }
 
   &__title {
-    @include option(padding, 128px 0 0, 18px 4px 0 24px, 28px 4px 0 24px);
+    @include option(padding, 128px 0 0, 18px 4px 0 24px, 33px 4px 0 24px);
 
     @include option(font-size, 40px, 22px);
     @include option(font-weight, 700);
@@ -55,7 +60,7 @@
     display: flex;
     @include option(justify-content, center, flex-start);
     @include option(gap, 34px, 16px, 16px);
-    @include option(padding, 85px 0 0, 43px 0 0, 47px 0 0);
+    @include option(padding, 85px 0 0, 43px 0 0, 37px 0 0);
   }
 
   &__item {
