@@ -10,7 +10,7 @@ export default function Calculate({ content }) {
             <div className={"calculate__container"}>
                 <div className={"calculate__wrapper"}>
                     <h2 className={"calculate__title"}>{content.title}</h2>
-                    <div className={"calculate__image"}><Picture imgAttr={content.image.imgAttr} /></div>
+                    <div className={"calculate__image"}><Picture {...content.image} /></div>
                     <form className={"calculate__form"} action={"#"} method={"POST"}>
                         <input className={"calculate__input"}
                                type={"number"} name={"number"}

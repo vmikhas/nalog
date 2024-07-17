@@ -12,7 +12,32 @@ export const headerContent = {
 export const calculateContent = {
     title: 'Сколько я получу после вычета налога?',
 		image: {
-			sources: [],
+			sources: [
+				{
+					srcSet: './images/wallet_m@1.5x.webp 1.5x, ./images/wallet_m@2x.webp 2x',
+					type: 'image/webp',
+					media: '(max-width: 767px)'
+				},
+				{
+					srcSet: './images/wallet_t@1.5x.webp 1.5x, ./images/wallet_t@2x.webp 2x',
+					type: 'image/webp',
+					media: '(max-width: 1023px)'
+				},
+				{
+					srcSet: './images/wallet_d@1.5x.webp',
+					type: 'image/webp'
+				},
+				{
+					srcSet: './images/wallet_m@1.5x.png 1.5x, ./images/wallet_m@2x.png 2x',
+					type: 'image/png',
+					media: '(max-width: 767px)'
+				},
+				{
+					srcSet: './images/wallet_t@1.5x.png 1.5x, ./images/wallet_t@2x.png 2x',
+					type: 'image/png',
+					media: '(max-width: 1023px)'
+				}
+			],
 			imgAttr: {
 					src: './images/wallet_d@1.5x.png',
 					alt: 'Кошелек'
@@ -59,26 +84,38 @@ export const calculateContent = {
 
 export const winningsContent = {
     image: {
-        sources: [],
+        sources: [
+			{
+				srcSet: './images/auto_m@1.5x.webp 1.5x, ./images/auto_m@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/auto_t@1.5x.webp 1.5x, ./images/auto_t@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 1023px)'
+			},
+			{
+				srcSet: './images/auto_d@1.5x.webp',
+				type: 'image/webp'
+			},
+			{
+				srcSet: './images/auto_m@1.5x.png 1.5x, ./images/auto_m@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/auto_t@1.5x.png 1.5x, ./images/auto_t@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 1023px)'
+			}
+		],
         imgAttr: {
             src: './images/auto_d@1.5x.png',
-            alt: 'Картинка машины'
+            alt: 'Картинка машины',
+			loading: 'lazy'
         }
     },
-//     image: {
-//          sources: [
-//          {
-//             srcSet: './images/doodle_m.png',
-//             type: 'image/png',
-//             media: '(max-width: 1023px)'
-//          },
-//          {
-//             srcSet: './images/doodle.png',
-//             type: 'image/png',
-//             media: '(min-width: 1024px)'
-//          },
-//     ]
-// }
     title: 'Если вы выиграли квартиру или машину, а не деньги',
     text: 'За них тоже придётся заплатить налог.',
     items: [
@@ -112,20 +149,52 @@ export const payContent = {
             '<p>Есть и другой способ: сформируйте платёжное поручение на&nbsp;<a class="pay__link" href="https://service.nalog.ru/payment/payment-search.html?svc=tax-fl" target="_blank">сайте ФНС<a/> и платите его на <a class="pay__link" href="https://www.gosuslugi.ru/pay" target="_blank">портале Госуслуг</a> или&nbsp;в&nbsp;приложении вашего банка. По бумажному экземпляру поручения налог можно оплатить в отделении любого банка.</p>'
 	},
     image: {
-        sources: [],
+        sources: [
+			{
+				srcSet: './images/laptop_d@1.5x.webp',
+				type: 'image/webp'
+			}
+		],
         imgAttr: {
             src: './images/laptop_d@1.5x.png',
-            alt: 'Картинка ноутбука'
+            alt: 'Картинка ноутбука',
+			loading: 'lazy'
         }
     },
 }
 
 export const fillingContent = {
     image: {
-        sources: [],
+        sources: [
+			{
+				srcSet: './images/forms_m@1.5x.webp 1.5x, ./images/forms_m@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/forms_t@1.5x.webp 1.5x, ./images/forms_t@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 1023px)'
+			},
+			{
+				srcSet: './images/forms_d@1.5x.webp',
+				type: 'image/webp'
+			},
+			{
+				srcSet: './images/forms_m@1.5x.png 1.5x, ./images/forms_m@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/forms_t@1.5x.png 1.5x, ./images/forms_t@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 1023px)'
+			}
+		],
         imgAttr: {
             src: './images/forms_d@1.5x.png',
-            alt: 'Бланки декларации по форме 3-НДФЛ'
+            alt: 'Бланки декларации по форме 3-НДФЛ',
+			loading: 'lazy'
         }
     },
 		button: 'Посмотреть образцы',
@@ -149,20 +218,72 @@ export const residentContent = {
     title: 'Налог на выигрыш для&nbsp;нерезидентов РФ',
     desc: 'Нерезидентами называют тех, кто большую часть года (больше 183&nbsp;дней) живёт и работает за&nbsp;пределами России. Для них налог на выигрыш — 30 %.',
     image: {
-        sources: [],
+        sources: [
+			{
+				srcSet: './images/planet_m@1.5x.webp 1.5x, ./images/planet_m@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/planet_t@1.5x.webp 1.5x, ./images/planet_t@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 1023px)'
+			},
+			{
+				srcSet: './images/planet_d@1.5x.webp',
+				type: 'image/webp'
+			},
+			{
+				srcSet: './images/planet_m@1.5x.png 1.5x, ./images/planet_m@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/planet_t@1.5x.png 1.5x, ./images/planet_t@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 1023px)'
+			}
+		],
         imgAttr: {
             src: './images/planet_d@1.5x.png',
-            alt: 'Картинка планеты Земля'
+            alt: 'Картинка планеты Земля',
+			loading: 'lazy'
         }
     }
 }
 
 export const casesContent = {
     image: {
-        sources: [],
+        sources: [
+			{
+				srcSet: './images/gift_m@1.5x.webp 1.5x, ./images/gift_m@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/gift_t@1.5x.webp 1.5x, ./images/gift_t@2x.webp 2x',
+				type: 'image/webp',
+				media: '(max-width: 1023px)'
+			},
+			{
+				srcSet: './images/gift_d@1.5x.webp',
+				type: 'image/webp'
+			},
+			{
+				srcSet: './images/gift_m@1.5x.png 1.5x, ./images/gift_m@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 767px)'
+			},
+			{
+				srcSet: './images/gift_t@1.5x.png 1.5x, ./images/gift_t@2x.png 2x',
+				type: 'image/png',
+				media: '(max-width: 1023px)'
+			}
+		],
         imgAttr: {
             src: './images/gift_d@1.5x.png',
-            alt: 'Картинка подарка'
+            alt: 'Картинка подарка',
+			loading: 'lazy'
         }
     },
     title: 'В каких случаях налог&nbsp;на выигрыш достигает 35 %',
@@ -189,7 +310,7 @@ export const mapContent = {
 		{icon: '', type: 'india'},
 		{icon: '', type: 'europe'},
 		{icon: '', type: 'russia'},
-		{icon: '', type: 'taiwan'},
+		{icon: '', type: 'taiwan'}
 	],
 	usa: '<b class="map__subtitle">США:</b> В Америке победителю лотереи придётся заплатить дважды: сначала счастливчик должен будет государству 25 % федерального налога, а затем ещё до 13 % налогов штата. В каждом штате — свой процент.',
 	india: '<b class="map__subtitle">Индия:</b> 31,2 % на выигрыши от 10 000 ₹',
@@ -206,49 +327,138 @@ export const footerContent = {
     imageLogo: {
         imgAttr: {
             src: './images/logo/logo.svg',
-            alt: 'Логотип Столото'
+            alt: 'Логотип Столото',
+			loading: 'lazy'
         }
     },
     info: '<p>Информация об организаторах лотерей, о правилах их проведения, призовом фонде, количестве призов или выигрышей, сроках, месте&nbsp;и порядке их получения ― на&nbsp;stoloto.ru. Выигрыши носят вероятностный характер. Лотерея не является способом&nbsp;заработка<br class="footer__br-tablet" /> и источником дохода.</p>' +
         '<p>АО «ТК «Центр», ОГРН 1127746385095, адрес: 109316, Москва, Волгоградский пр-т,<br class="footer__br-desktop"/> д. 43, корп. 3, этаж 10, пом. XXV, ком. 13Б. Реклама. 18+</p>',
     socials: [
-        {imgAttr: {
+        {
+			imgAttr: {
                 src: './images/social/vk.svg',
-                alt: 'Логотип Vkontakte'
-            }},
-        {imgAttr: {
+                alt: 'Логотип Vkontakte',
+				loading: 'lazy'
+            }
+		},
+        {
+			imgAttr: {
                 src: './images/social/ok.svg',
-                alt: 'Логотип Одноклассников'
-            }},
-        {imgAttr: {
+                alt: 'Логотип Одноклассников',
+				loading: 'lazy'
+            }
+		},
+        {
+			imgAttr: {
                 src: './images/social/tik_tok.svg',
-                alt: 'Логотип Tik-Tok'
-            }},
-        {imgAttr: {
+                alt: 'Логотип Tik-Tok',
+				loading: 'lazy'
+            }
+		},
+        {
+			imgAttr: {
                 src: './images/social/rutube.svg',
-                alt: 'Логотип Rutube'
-            }},
+                alt: 'Логотип Rutube',
+				loading: 'lazy'
+            }
+		},
     ],
     organizations: [
-        {imgAttr: {
+        {
+			sources: [
+				{
+					srcSet: './images/min_sporta@1.5x.webp 1.5x, ./images/min_sporta@2x.webp 2x',
+					type: 'image/webp',
+					media: '(max-width: 1023px)'
+				},
+				{
+					srcSet: './images/min_sporta@1.5x.webp',
+					type: 'image/webp'
+				},
+				{
+					srcSet: './images/min_sporta@1.5x.png 1.5x, ./images/min_sporta@2x.png 2x',
+					type: 'image/png',
+					media: '(max-width: 1023px)'
+				}
+			],
+			imgAttr: {
                 src: './images/min_sporta@1.5x.png',
-                alt: 'Логотип Министерство спорта РФ'
-            }},
-        {imgAttr: {
+                alt: 'Логотип Министерство спорта РФ',
+				loading: 'lazy'
+            }
+		},
+        {
+			sources: [
+				{
+					srcSet: './images/min_fin@1.5x.webp 1.5x, ./images/min_fin@2x.webp 2x',
+					type: 'image/webp',
+					media: '(max-width: 1023px)'
+				},
+				{
+					srcSet: './images/min_fin@1.5x.webp',
+					type: 'image/webp'
+				},
+				{
+					srcSet: './images/min_fin@1.5x.png 1.5x, ./images/min_fin@2x.png 2x',
+					type: 'image/png',
+					media: '(max-width: 1023px)'
+				}
+			],
+			imgAttr: {
                 src: './images/min_fin@1.5x.png',
-                alt: 'Логотип Министерство финансов РФ'
-            }}
+                alt: 'Логотип Министерство финансов РФ',
+				loading: 'lazy'
+            }
+		}
     ],
     orgText: 'Организаторами лотерей являются Министерство спорта РФ<br class="footer__br-tablet-min" /> и&nbsp;Министерство финансов РФ.',
     associations: [
-        {imgAttr: {
+        {
+			sources: [
+				{
+					srcSet: './images/world_ass@1.5x.webp 1.5x, ./images/world_ass@2x.webp 2x',
+					type: 'image/webp',
+					media: '(max-width: 1023px)'
+				},
+				{
+					srcSet: './images/world_ass@1.5x.webp',
+					type: 'image/webp'
+				},
+				{
+					srcSet: './images/world_ass@1.5x.png 1.5x, ./images/world_ass@2x.png 2x',
+					type: 'image/png',
+					media: '(max-width: 1023px)'
+				}
+			],
+			imgAttr: {
                 src: './images/world_ass@1.5x.png',
-                alt: 'Логотип Всемирной лотерейной ассоциации'
-            }},
-        {imgAttr: {
+                alt: 'Логотип Всемирной лотерейной ассоциации',
+				loading: 'lazy'
+            }
+		},
+        {
+			sources: [
+				{
+					srcSet: './images/europe_ass@1.5x.webp 1.5x, ./images/europe_ass@2x.webp 2x',
+					type: 'image/webp',
+					media: '(max-width: 1023px)'
+				},
+				{
+					srcSet: './images/europe_ass@1.5x.webp',
+					type: 'image/webp'
+				},
+				{
+					srcSet: './images/europe_ass@1.5x.png 1.5x, ./images/europe_ass@2x.png 2x',
+					type: 'image/png',
+					media: '(max-width: 1023px)'
+				}
+			],
+			imgAttr: {
                 src: './images/europe_ass@1.5x.png',
-                alt: 'Логотип Европейской лотерейной ассоциации'
-            }}
+                alt: 'Логотип Европейской лотерейной ассоциации',
+				loading: 'lazy'
+            }
+		}
     ],
     assText: '«Столото» состоит во Всемирной и Европейской лотерейных ассоциациях (The World Lottery Association и The European Lotteries Association). Это гарантирует соблюдение прав участников, случайность определения победителей, своевременную выплату выигрышей, конфиденциальность личных данных.'
 }

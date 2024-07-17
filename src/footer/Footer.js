@@ -25,7 +25,7 @@ export default function Footer({ info, imageLogo, socials, organizations, orgTex
                             {organizations.map((organization, id) =>
                                 <li className={`footer__org-item footer__org-item_${id}`} key={id}>
                                     <a className={`footer__org-link footer__org-link_${id}`} href={"#1"}>
-                                        <Picture imgAttr={organization.imgAttr} />
+                                        <Picture imgAttr={organization.imgAttr} sources={organization.sources} />
                                     </a>
                                 </li>)}
                         </ul>
@@ -36,7 +36,7 @@ export default function Footer({ info, imageLogo, socials, organizations, orgTex
                             {associations.map((association, id) =>
                                 <li className={`footer__ass-item footer__ass-item_${id}`} key={id}>
                                     <a className={`footer__ass-link footer__ass-link_${id}`} href={"#1"}>
-                                        <Picture imgAttr={association.imgAttr} />
+                                        <Picture imgAttr={association.imgAttr} sources={association.sources} />
                                     </a>
                                 </li>)}
                         </ul>

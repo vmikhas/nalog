@@ -3,11 +3,12 @@ import Picture from "../constants/Picture";
 import parse from "html-react-parser";
 
 export default function Map({ content }) {
-	const [open, setOpen] = useState();
-	// const toggleTooltip = () => {
-	// 	setOpen(p => !p);
-	// };
-
+	const [open, setOpen] = useState(false);
+	const buttonCLick = (type) => {
+		if(open === type) setOpen(false);
+		else setOpen(type);
+	};
+	
     return (
         <section className={"map"}>
             <div className={"map__container"}>
@@ -15,20 +16,13 @@ export default function Map({ content }) {
                 <p className={"map__desc"}>{parse(content.desc)}</p>
                 <div className={"map__image"}>
                     <Picture {...content.mapImage} />
-                    {/* <div className={"map__icon map__icon_usa"}>
-                        <button className={"map__tooltip"}
-								onClick={toggleTooltip}
-                                type={"button"}
-                                aria-label={"Налоги в США"}>{{type: usa}}</button>
-						<span className={`map__tooltip-text ${open ? 'map__tooltip-text_active' : ''}`}>{parse(usa)}</span>
-                    </div> */}
 					<ul className={"map__list"}>
 						{content.dots.map((dot, id) =>
 							<li className={`map__item map__item_${id}`} key={"item-" + id}>
 								<button className={`map__tooltip`}
-										onClick={() => setOpen(dot.type)}
+										onClick={() => buttonCLick(dot.type)}
                                 		type={"button"}>{dot.icon}</button>
-								<span className={`map__tooltip-text ${dot.type === open ? 'map__tooltip-text_active' : ''}`}>{content[open]}</span>
+								{open && <span className={`map__tooltip-text ${dot.type === open ? 'map__tooltip-text_active' : ''}`}>{parse(content[open])}</span>}
 							</li>)}
 					</ul>
                 </div>
