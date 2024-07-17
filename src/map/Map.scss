@@ -34,7 +34,7 @@
     justify-content: center;
     @include option(max-width, 1122px, 295px, 656px);
     margin: 0 auto;
-    @include option(padding, 58px 0 56px 4px, 25px 0 70px 0, 20px 0 45px 0);
+    @include option(padding, 58px 0 54px 4px, 25px 0 70px 0, 20px 0 45px 0);
   }
 
 	&__image-world {

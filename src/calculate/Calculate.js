@@ -34,19 +34,19 @@ export default function Calculate({ content }) {
                     <div className={"calculate__box"}>
                         <div className={"calculate__carousel"}>
                             <h3 className={"calculate__term"}>{content.carouselTitle}</h3>
-							<Swiper	{...settings.calculate}>
-								<ul className={"calculate__carousel-list"}>
-                            	    {content.carouselItems.map((carouselItem, id) =>
-                            	        <SwiperSlide>
-											<li className={`calculate__carousel-item calculate__carousel-item_${id}`}
-                            	            key={"item-" + id}>
-                            	            <button className={`calculate__carousel-button ${carouselItem.type === active ? 'calculate__carousel-button_active' : ''}`}
-													onClick={() => setActive(carouselItem.type)}
-                            	                    type={"button"}>{carouselItem.number}</button>
-                            	        	</li>
-										</SwiperSlide>)}
-                            	</ul>
-							</Swiper>
+														<Swiper	{...settings.calculate}>
+															<ul className={"calculate__carousel-list"}>
+              							      {content.carouselItems.map((carouselItem, id) =>
+              							          <SwiperSlide>
+																					<li className={`calculate__carousel-item calculate__carousel-item_${id}`}
+              							              	            key={"item-" + id}>
+              							              	    						<button className={`calculate__carousel-button ${carouselItem.type === active ? 'calculate__carousel-button_active' : ''}`}
+																																		onClick={() => setActive(carouselItem.type)}
+              							              	                   			type={"button"}>{carouselItem.number}</button>
+              							              </li>
+																	</SwiperSlide>)}
+              							              	</ul>
+														</Swiper>
                             <p className={"calculate__carousel-desc"}>{parse(content[active].desc)}</p>
                         </div>
                         <p className={"calculate__footnote"}>{content.calculateFootnote}</p>

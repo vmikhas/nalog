@@ -1,11 +1,25 @@
 .winnings {
+	overflow: hidden;
+
   &__container {
     @include container($DESKTOP, 0);
     @include option(padding, 0 45px, 0 16px, 0 32px);
 
-	.swiper {
-		overflow: visible;
-	}
+		.swiper {
+			overflow: visible;
+
+			.swiper-wrapper {
+				@media (min-width: $MIN-DESKTOP) {
+					justify-content: center;
+					gap: 34px;
+					padding: 85px 0 0;
+				}
+			}
+
+			.swiper-slide {
+				@include option(width, auto, 336px);
+			}
+		}
   }
 
   &__wrapper {
@@ -71,18 +85,14 @@
     justify-content: space-between;
 
     @include option(max-width, 350px, 320px);
-    @include option(min-height, auto, 360px);
+    @include option(min-height, 215px, 360px);
+		@include option(margin, 0, 0 0 32px, 37px 0 64px 0);
     @include option(padding, 0, 17px 25px 25px, 17px 25px 23px);
 
     @include option(font-size, 16px);
     @include option(font-weight, 400);
     @include option(line-height, 150%);
     color: $grey800;
-
-    // &_1,
-    // &_2 {
-    //   display: none;
-    // }
 
     &::before {
       content: "";

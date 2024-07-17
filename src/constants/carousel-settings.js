@@ -8,6 +8,6 @@ export const settings = {
 export const options = {
 	winning: {
 		slidesPerView: 'auto',
-		spaceBetween: '-7'
+		spaceBetween: '0'
 	}
 }
