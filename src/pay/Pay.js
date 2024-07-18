@@ -1,6 +1,7 @@
 import parse from "html-react-parser";
 import Picture from "../constants/Picture";
 import { useState } from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 export default function Pay({ content }) {
 	const [active, setActive] = useState('one');
@@ -19,8 +20,16 @@ export default function Pay({ content }) {
 										aria-label={"Первая страница"}>{pagination.number}</button>
 								</li>)}
 						</ul>
-						<h3 className={"pay__subtitle"}>{content[active].subtitle}</h3>
-						<p className={"pay__desc"}>{parse(content[active].desc)}</p>
+						<SwitchTransition>
+							<CSSTransition key={active} classNames={"pay__subtitle"} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
+								{active ? <h3 className={"pay__subtitle"}>{content[active].subtitle}</h3> : <span />}
+							</CSSTransition>
+						</SwitchTransition>
+						<SwitchTransition>
+							<CSSTransition key={active} classNames={"pay__desc"} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
+								{active ? <p className={"pay__desc"}>{parse(content[active].desc)}</p> : <p />}
+							</CSSTransition>
+						</SwitchTransition>
 					</div>
 					<div className={"pay__image"}>
 						<Picture {...content.image} />

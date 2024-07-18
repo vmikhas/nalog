@@ -19,13 +19,7 @@ export default function Cases({ image, title, desc, tooltip, text }) {
 							onClick={() => setOpen(!open)}
 							type={"button"}
 							aria-label={"Пояснение"}>
-							<CSSTransition
-								in={open}
-								timeout={300}
-								classNames={"cases__tooltip-text"}
-								mountOnEnter
-								unmountOnExit
-							>
+							<CSSTransition in={open} timeout={300} classNames={"cases__tooltip-text"} mountOnEnter unmountOnExit>
 								<span className={`cases__tooltip-text`}>{parse(tooltip)}</span>
 							</CSSTransition>
 						</button>

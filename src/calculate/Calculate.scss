@@ -177,24 +177,6 @@
 		}
 	}
 
-	&__carousel-desc-transition-enter-active {
-		opacity: 0;
-	}
-
-	&__carousel-desc-transition-enter-done {
-		opacity: 1;
-		transition: opacity 200ms;
-	}
-
-	&__carousel-desc-transition-exit-active {
-		opacity: 1;
-	}
-
-	&__carousel-desc-transition-exit-done {
-		opacity: 0;
-		transition: opacity 200ms;
-	}
-
 	&__carousel-desc {
 		@include option(padding, 17px 0 0);
 
@@ -204,6 +186,21 @@
 
 		&_1 {
 			padding-bottom: 12px;
+		}
+
+		&-enter {
+			opacity: 0;
+		}
+
+		&-enter-active,
+		&-enter-done {
+			opacity: 1;
+			transition: 0.3s ease-in-out;
+		}
+
+		&-exit-active {
+			opacity: 0;
+			transition: 0.3s ease-in-out;
 		}
 	}
 

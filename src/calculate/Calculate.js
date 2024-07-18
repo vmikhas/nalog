@@ -4,10 +4,13 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import { settings } from "../constants/carousel-settings";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 export default function Calculate({ content }) {
 	const [active, setActive] = useState('average');
+
+	// const calculateTax = (number, tax) => {
+	// };
 
 	return (
 		<section className={"calculate"}>
@@ -17,7 +20,8 @@ export default function Calculate({ content }) {
 					<div className={"calculate__image"}><Picture {...content.image} /></div>
 					<form className={"calculate__form"} action={"#"} method={"POST"}>
 						<input className={"calculate__input"}
-							type={"number"} name={"number"}
+							type={"number"}
+							name={"number"}
 							placeholder={"Введите сумму выигрыша"}
 							required />
 						<button className={"calculate__button"} type={"button"}>{content.button}</button>
@@ -48,15 +52,11 @@ export default function Calculate({ content }) {
 										</SwiperSlide>)}
 								</ul>
 							</Swiper>
-							<CSSTransition
-								in={active}
-								timeout={0}
-								classNames="calculate__carousel-desc-transition"
-								mountOnEnter
-								unmountOnExit
-							>
-								<p className={"calculate__carousel-desc"}>{parse(content[active].desc)}</p>
-							</CSSTransition>
+							<SwitchTransition>
+								<CSSTransition key={active} classNames={"calculate__carousel-desc"} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
+									{active ? <p className={"calculate__carousel-desc"}>{parse(content[active].desc)}</p> : <p />}
+								</CSSTransition>
+							</SwitchTransition>
 						</div>
 						<p className={"calculate__footnote"}>{content.calculateFootnote}</p>
 					</div>
@@ -65,6 +65,3 @@ export default function Calculate({ content }) {
 		</section>
 	);
 }
-
-// onEnter={() => setActive(false)}
-// onExited={() => setActive(true)}

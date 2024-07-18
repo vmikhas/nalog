@@ -6,14 +6,13 @@ import { CSSTransition } from "react-transition-group";
 export default function Map({ content }) {
 	const [activeId, setActiveId] = useState(null);
 
-
 	return (
 		<section className={"map"}>
 			<div className={"map__container"}>
 				<h2 className={"map__title"}>{content.title}</h2>
 				<p className={"map__desc"}>{parse(content.desc)}</p>
 				<div className={"map__image"}>
-					<MapImage />
+					<MapImage className={`map__image-world`} />
 					<ul className={"map__list"}>
 						{content.dots.map((dot, id) =>
 							<li className={`map__item map__item_${id}`} key={"item-" + id}>
