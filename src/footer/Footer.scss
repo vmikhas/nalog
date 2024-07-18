@@ -1,26 +1,26 @@
 .footer {
-  background-color: $grey800;
+	background-color: $grey800;
 
-  &__container {
-    display: grid;
-    @include option(grid-template-columns, 1fr 1fr, 1fr, 1fr 1fr);
-    @include option(column-gap, 35px, 0, 17px);
-    @include container($DESKTOP, 0);
-    @include option(padding, 0 85px 75px, 0 40px 43px, 0 56px 43px);
+	&__container {
+		display: grid;
+		@include option(grid-template-columns, 1fr 1fr, 1fr, 1fr 1fr);
+		@include option(column-gap, 35px, 0, 17px);
+		@include container($DESKTOP, 0);
+		@include option(padding, 0 85px 75px, 0 40px 43px, 0 56px 43px);
 
-    @include option(font-size, 12px);
-    @include option(font-weight, 400);
-    color: $grey300;
-  }
+		@include option(font-size, 12px);
+		@include option(font-weight, 400);
+		color: $grey300;
+	}
 
-  &__wrapper {
-    @include option(padding, 35px 0 0);
-  }
+	&__wrapper {
+		@include option(padding, 35px 0 0);
+	}
 
-  &__logo {
-    display: flex;
-    width: 183px;
-    height: 37px;
+	&__logo {
+		display: flex;
+		width: 183px;
+		height: 37px;
 
 		transition: 0.3s ease-in-out;
 
@@ -32,82 +32,82 @@
 		&:active {
 			opacity: 0.6;
 		}
-  }
+	}
 
-  &__info {
-    @include option(padding, 24px 0 0);
-  }
+	&__info {
+		@include option(padding, 24px 0 0);
+	}
 
-  &__br-tablet {
-    @media (max-width: $TABLET - 1) {
-      display: none;
-    }
-  }
+	&__br-tablet {
+		@media (max-width: $TABLET - 1) {
+			display: none;
+		}
+	}
 
-  &__br-tablet-min {
-    display: none;
+	&__br-tablet-min {
+		display: none;
 
-    @media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
-      display: block;
-    }
-  }
+		@media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
+			display: block;
+		}
+	}
 
-  &__br-desktop {
-    @media (max-width: $MIN-DESKTOP - 1) {
-      display: none;
-    }
-  }
+	&__br-desktop {
+		@media (max-width: $MIN-DESKTOP - 1) {
+			display: none;
+		}
+	}
 
-  &__social-list {
-    display: flex;
-    gap: 24px;
-    @include option(padding, 24px 0 0, 32px 0 0, 18px 0 0);
-  }
+	&__social-list {
+		display: flex;
+		gap: 24px;
+		@include option(padding, 24px 0 0, 32px 0 0, 18px 0 0);
+	}
 
-  &__social-item {
-    width: 40px;
-    height: 40px;
-  }
+	&__social-item {
+		width: 40px;
+		height: 40px;
+	}
 
-  &__social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+	&__social-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
 
-    background-color: $grey500;
-    border-radius: 8px;
+		background-color: $grey500;
+		border-radius: 8px;
 
 		transition: 0.2s ease-in-out;
 
-    &_0 {
-      img {
-        width: 26px;
-        height: 16px;
-      }
-    }
+		&_0 {
+			img {
+				width: 26px;
+				height: 16px;
+			}
+		}
 
-    &_1 {
-      img {
-        width: 16px;
-        height: 28px;
-      }
-    }
+		&_1 {
+			img {
+				width: 16px;
+				height: 28px;
+			}
+		}
 
-    &_2 {
-      img {
-        width: 24px;
-        height: 28px;
-      }
-    }
+		&_2 {
+			img {
+				width: 24px;
+				height: 28px;
+			}
+		}
 
-    &_3 {
-      img {
-        width: 17px;
-        height: 20px;
-      }
-    }
+		&_3 {
+			img {
+				width: 17px;
+				height: 20px;
+			}
+		}
 
 		&:hover,
 		&:focus {
@@ -117,29 +117,29 @@
 		&:active {
 			opacity: 0.7;
 		}
-  }
+	}
 
-  &__inner {
-    @include option(padding, 42px 0 0 95px, 58px 0 0, 40px 0 0);
-  }
+	&__inner {
+		@include option(padding, 42px 0 0 95px, 58px 0 0, 40px 0 0);
+	}
 
-  &__ass {
-    @include option(padding, 32px 0 0, 27px 0 0, 17px 0 0);
-  }
+	&__ass {
+		@include option(padding, 32px 0 0, 27px 0 0, 17px 0 0);
+	}
 
-  &__org-list,
-  &__ass-list {
-    display: flex;
-    gap: 16px;
-  }
+	&__org-list,
+	&__ass-list {
+		display: flex;
+		gap: 16px;
+	}
 
-  &__org-link,
-  &__ass-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
+	&__org-link,
+	&__ass-link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 32px;
+		height: 32px;
 
 		transition: 0.3s ease-in-out;
 
@@ -151,13 +151,13 @@
 		&:active {
 			opacity: 0.7;
 		}
-  }
+	}
 
-  &__org-text {
-    @include option(padding, 13px 0 0, 16px 0 0, 15px 0 0);
-  }
+	&__org-text {
+		@include option(padding, 13px 0 0, 16px 0 0, 15px 0 0);
+	}
 
-  &__ass-text {
-    @include option(padding, 16px 0 0);
-  }
+	&__ass-text {
+		@include option(padding, 16px 0 0);
+	}
 }

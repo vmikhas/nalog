@@ -1,9 +1,9 @@
 .winnings {
 	overflow: hidden;
 
-  &__container {
-    @include container($DESKTOP, 0);
-    @include option(padding, 0 45px, 0 16px, 0 32px);
+	&__container {
+		@include container($DESKTOP, 0);
+		@include option(padding, 0 45px, 0 16px, 0 32px);
 
 		.swiper {
 			overflow: visible;
@@ -20,125 +20,125 @@
 				@include option(width, auto, 336px);
 			}
 		}
-  }
+	}
 
-  &__wrapper {
-    display: flex;
-    @include option(flex-direction, row, column, row);
-    @include option(gap, 32px, 0, 23px);
-    @include option(margin, -12px 0 0, -12px 0 0, 0);
-    @include option(padding, 0, 41px 0 0, 0 20px 0 53px);
+	&__wrapper {
+		display: flex;
+		@include option(flex-direction, row, column, row);
+		@include option(gap, 32px, 0, 23px);
+		@include option(margin, -12px 0 0, -12px 0 0, 0);
+		@include option(padding, 0, 41px 0 0, 0 20px 0 53px);
 
-    @media (max-width: $TABLET - 1) {
-      display: flex;
-      flex-direction: column;
-      padding: 41px 0 0;
-    }
-  }
+		@media (max-width: $TABLET - 1) {
+			display: flex;
+			flex-direction: column;
+			padding: 41px 0 0;
+		}
+	}
 
-  &__image {
-	  @include option(max-width, 584px, 258px, 260px);
-	  width: 100%;
-	  @include option(height, 439px, 196px, 211px);
-	  @include option(margin, 0, 0 auto);
+	&__image {
+		@include option(max-width, 584px, 258px, 260px);
+		width: 100%;
+		@include option(height, 439px, 196px, 211px);
+		@include option(margin, 0, 0 auto);
 
-    img {
-      object-fit: contain;
-    }
-  }
+		img {
+			object-fit: contain;
+		}
+	}
 
-  &__inner {
-    @include option(width, 600px, auto, auto);
-	@include option(padding, 0, 0 0 43px, 0);
-  }
+	&__inner {
+		@include option(width, 600px, auto, auto);
+		@include option(padding, 0, 0 0 43px, 0);
+	}
 
-  &__title {
-    @include option(padding, 128px 0 0, 18px 4px 0 24px, 33px 4px 0 24px);
+	&__title {
+		@include option(padding, 128px 0 0, 18px 4px 0 24px, 33px 4px 0 24px);
 
-    @include option(font-size, 40px, 22px);
-    @include option(font-weight, 700);
-    text-transform: uppercase;
-    color: $black;
-  }
+		@include option(font-size, 40px, 22px);
+		@include option(font-weight, 700);
+		text-transform: uppercase;
+		color: $black;
+	}
 
-  &__text {
-    @include option(padding, 17px 0 0, 17px 24px 0);
+	&__text {
+		@include option(padding, 17px 0 0, 17px 24px 0);
 
-    @include option(font-size, 22px, 16px);
-    @include option(font-weight, 500);
-    @include option(line-height, 145%, 150%);
-    color: $grey500;
-  }
+		@include option(font-size, 22px, 16px);
+		@include option(font-weight, 500);
+		@include option(line-height, 145%, 150%);
+		color: $grey500;
+	}
 
-  &__list {
-    display: flex;
-    @include option(justify-content, center, flex-start);
-    @include option(gap, 34px, 16px, 16px);
-    @include option(padding, 85px 0 0, 43px 0 0, 37px 0 0);
-  }
+	&__list {
+		display: flex;
+		@include option(justify-content, center, flex-start);
+		@include option(gap, 34px, 16px, 16px);
+		@include option(padding, 85px 0 0, 43px 0 0, 37px 0 0);
+	}
 
-  &__item {
-    position: relative;
+	&__item {
+		position: relative;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
-    @include option(max-width, 350px, 320px);
-    @include option(min-height, 215px, 360px);
+		@include option(max-width, 350px, 320px);
+		@include option(min-height, 215px, 360px);
 		@include option(margin, 0, 0 0 32px, 37px 0 64px 0);
-    @include option(padding, 0, 17px 25px 25px, 17px 25px 23px);
+		@include option(padding, 0, 17px 25px 25px, 17px 25px 23px);
 
-    @include option(font-size, 16px);
-    @include option(font-weight, 400);
-    @include option(line-height, 150%);
-    color: $grey800;
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
+		color: $grey800;
 
-    &::before {
-      content: "";
-      display: block;
-      @include option(width, 40px, 28px);
-      @include option(height, 40px, 28px);
+		&::before {
+			content: "";
+			display: block;
+			@include option(width, 40px, 28px);
+			@include option(height, 40px, 28px);
 
-      position: absolute;
-      @include option(top, -49px, -42px);
-      @include option(left, -1px, 14px);
-    }
+			position: absolute;
+			@include option(top, -49px, -42px);
+			@include option(left, -1px, 14px);
+		}
 
-    &_0::before {
-      background-image: url("./../../public/images/icons/currency.svg");
-    }
+		&_0::before {
+			background-image: url("./../../public/images/icons/currency.svg");
+		}
 
-    &_1::before {
-      background-image: url("./../../public/images/icons/deduction.svg");
-    }
+		&_1::before {
+			background-image: url("./../../public/images/icons/deduction.svg");
+		}
 
-    &_2::before {
-      background-image: url("./../../public/images/icons/message.svg");
-    }
-    
-    @media (max-width: $MIN-DESKTOP) {
-      background-color: $white;
-      border-top: 56px solid rgba(128, 77, 180, 0.16);
-      border-radius: 16px;
-      box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.08);
-    }
-  }
+		&_2::before {
+			background-image: url("./../../public/images/icons/message.svg");
+		}
 
-  &__link {
-    display: block;
-    @include option(max-width, 23vw, 271px);
-    @include option(margin, 0 0 0 -2px);
-    @include option(padding, 12px 0);
+		@media (max-width: $MIN-DESKTOP) {
+			background-color: $white;
+			border-top: 56px solid rgba(128, 77, 180, 0.16);
+			border-radius: 16px;
+			box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.08);
+		}
+	}
 
-    @include option(font-size, 16px);
-    @include option(font-weight, 700);
-    text-align: center;
-    text-decoration: none;
-    color: $white;
+	&__link {
+		display: block;
+		@include option(max-width, 23vw, 271px);
+		@include option(margin, 0 0 0 -2px);
+		@include option(padding, 12px 0);
 
-    background-color: $violet;
-    border-radius: 8px;
+		@include option(font-size, 16px);
+		@include option(font-weight, 700);
+		text-align: center;
+		text-decoration: none;
+		color: $white;
+
+		background-color: $violet;
+		border-radius: 8px;
 
 		transition: 0.2s ease-out;
 
@@ -150,5 +150,5 @@
 		&:active {
 			opacity: 0.6;
 		}
-  }
+	}
 }

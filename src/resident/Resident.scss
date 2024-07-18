@@ -1,50 +1,50 @@
 .resident {
-  @include option(margin, 77px 0 0, 27px 0 0, 47px 0 0);
+	@include option(margin, 77px 0 0, 27px 0 0, 47px 0 0);
 
-  background-color: $grey200;
+	background-color: $grey200;
 
-  &__container {
-    @include container($DESKTOP, 0);
-    display: flex;
-    @include option(flex-direction, row, column-reverse);
-    @include option(padding, 58px 85px 50px, 30px 38px 39px 40px, 36px 56px 80px);
+	&__container {
+		@include container($DESKTOP, 0);
+		display: flex;
+		@include option(flex-direction, row, column-reverse);
+		@include option(padding, 58px 85px 50px, 30px 38px 39px 40px, 36px 56px 80px);
 
-    @media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
-      display: grid;
-      grid-template-columns: 1fr max-content;
-    }
-  }
+		@media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
+			display: grid;
+			grid-template-columns: 1fr max-content;
+		}
+	}
 
-  &__wrapper {
-    @include option(max-width, 620px);
-  }
+	&__wrapper {
+		@include option(max-width, 620px);
+	}
 
-  &__title {
-    @include option(padding, 67px 0 0, 20px 0 0);
+	&__title {
+		@include option(padding, 67px 0 0, 20px 0 0);
 
-    @include option(font-size, 40px, 22px);
-    @include option(font-weight, 700);
-    text-transform: uppercase;
-    color: $black;
-  }
+		@include option(font-size, 40px, 22px);
+		@include option(font-weight, 700);
+		text-transform: uppercase;
+		color: $black;
+	}
 
-  &__desc {
-    @include option(padding, 17px 100px 0 0, 24px 0 0, 17px 80px 0 0);
+	&__desc {
+		@include option(padding, 17px 100px 0 0, 24px 0 0, 17px 80px 0 0);
 
-    @include option(font-size, 16px);
-    @include option(font-weight, 400);
-    @include option(line-height, 150%);
-    color: $black;
-  }
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
+		color: $black;
+	}
 
-  &__inner {
-    @include option(margin, auto, auto, 5px 35px 0 0);
-	@include option(padding, 0, 0 0 0 10px, 0);
-  }
+	&__inner {
+		@include option(margin, auto, auto, 5px 35px 0 0);
+		@include option(padding, 0, 0 0 0 10px, 0);
+	}
 
-  &__image {
-    @include option(max-width, 381px, 190px, 237px);
-    // width: 100%;
-    @include option(max-height, 356px, 161px, 207px);
-  }
+	&__image {
+		@include option(max-width, 381px, 190px, 237px);
+		// width: 100%;
+		@include option(max-height, 356px, 161px, 207px);
+	}
 }

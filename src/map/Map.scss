@@ -1,47 +1,47 @@
 .map {
-  @include option(margin, 111px 0 0, 40px 0 0, 43px 0 0);
+	@include option(margin, 111px 0 0, 40px 0 0, 43px 0 0);
 
-  background-color: $grey200;
+	background-color: $grey200;
 
-  &__container {
-    @include container($DESKTOP, 0);
-    @include option(padding, 0 80px, 0 40px, 0 56px);
-  }
+	&__container {
+		@include container($DESKTOP, 0);
+		@include option(padding, 0 80px, 0 40px, 0 56px);
+	}
 
-  &__title {
-    @include option(padding, 125px 5px 0, 40px 0 0, 39px 0 0);
+	&__title {
+		@include option(padding, 125px 5px 0, 40px 0 0, 39px 0 0);
 
-    @include option(font-size, 40px, 22px);
-    @include option(font-weight, 700);
-    text-transform: uppercase;
-  }
+		@include option(font-size, 40px, 22px);
+		@include option(font-weight, 700);
+		text-transform: uppercase;
+	}
 
-  &__desc {
-    @include option(max-width, 790px);
-    width: 100%;
-    @include option(padding, 17px 5px 0, 17px 0 0);
+	&__desc {
+		@include option(max-width, 790px);
+		width: 100%;
+		@include option(padding, 17px 5px 0, 17px 0 0);
 
-    @include option(font-size, 22px, 16px);
-    @include option(font-weight, 500);
-    @include option(line-height, 145%, 150%);
-    color: $grey500;
-  }
+		@include option(font-size, 22px, 16px);
+		@include option(font-weight, 500);
+		@include option(line-height, 145%, 150%);
+		color: $grey500;
+	}
 
-  &__image {
-    position: relative;
+	&__image {
+		position: relative;
 
-    display: flex;
-    justify-content: center;
-    @include option(max-width, 1122px, 295px, 656px);
-    margin: 0 auto;
-    @include option(padding, 58px 0 54px 4px, 25px 0 70px 0, 20px 0 45px 0);
-  }
+		display: flex;
+		justify-content: center;
+		@include option(max-width, 1122px, 295px, 656px);
+		margin: 0 auto;
+		@include option(padding, 58px 0 54px 4px, 25px 0 70px 0, 20px 0 45px 0);
+	}
 
 	&__image-world {
-    @include option(width, 1122px, 295px, 656px);
-    @include option(height, 554px, 145px, 327px);
+		@include option(width, 1122px, 295px, 656px);
+		@include option(height, 554px, 145px, 327px);
 
-    object-fit: contain;
+		object-fit: contain;
 
 		&_active {
 			&.usa {
@@ -51,188 +51,202 @@
 		}
 	}
 
-  &__item {
-    position: absolute;
-	z-index: 1;
-    transform: translate(-50%, -50%);
+	&__item {
+		position: absolute;
+		z-index: 1;
+		transform: translate(-50%, -50%);
 
-    &_0 {
-      @include option(top, 42.9%, 36.2%, 40%);
-      @include option(left, 18.6%, 18.8%, 19%);
-    }
+		&_0 {
+			@include option(top, 42.9%, 36.2%, 40%);
+			@include option(left, 18.6%, 18.8%, 19%);
+		}
 
-    &_1 {
-      @include option(top, 51.4%, 43.2%, 48.7%);
-      @include option(left, 69%, 68.8%, 68.6%);
-    }
+		&_1 {
+			@include option(top, 51.4%, 43.2%, 48.7%);
+			@include option(left, 69%, 68.8%, 68.6%);
+		}
 
-    &_2 {
-      @include option(top, 38.5%, 32.4%, 35.1%);
-      @include option(left, 48.6%, 49.3%, 49%);
-    }
+		&_2 {
+			@include option(top, 38.5%, 32.4%, 35.1%);
+			@include option(left, 48.6%, 49.3%, 49%);
+		}
 
-    &_3 {
-      @include option(top, 27.6%, 25.2%, 25%);
-      @include option(left, 73.89%, 74.3%, 73.7%);
-    }
+		&_3 {
+			@include option(top, 27.6%, 25.2%, 25%);
+			@include option(left, 73.89%, 74.3%, 73.7%);
+		}
 
-    &_4 {
-      @include option(top, 51.5%, 41.5%, 48.4%);
-      @include option(left, 80.4%, 80.1%, 80.3%);
-    }
-  }
-
-  &__tooltip {
-    @include option(width, 24px, 16px, 24px);
-    @include option(height, 24px, 16px, 24px);
-    padding: 0;
-
-    background-color: transparent;
-	background-image: url("./../../public/images/icons/dot.svg");
-	@include option(background-size, 24px 24px, 16px 16px, 24px 24px);
-	background-position: center;
-	background-repeat: no-repeat;
-    border: none;
-
-    cursor: pointer;
-
-	&:hover,
-	&:focus {
-		@include option(width, 36px, 24px, 36px);
-		@include option(height, 36px, 24px, 36px);
-
-		background-image: url("./../../public/images/icons/dot_hovered.svg");
-		@include option(background-size, 36px 36px, 24px 24px, 36px 36px);
-	}
-  }
-
-  &__tooltip-text {
-	position: absolute;
-	@include option(bottom, 135%, 150%);
-	left: 50%;
-	transform: translateX(-50%);
-
-	display: none;
-	@include option(width, 417px, 248px);
-	@include option(padding, 12px, 12px 13px);
-
-	@include option(font-size, 16px, 14px);
-	@include option(font-weight, 400);
-	@include option(line-height, 150%, 157%);
-	color: $black;
-
-	background-color: $white;
-	border-radius: 16px;
-	box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.24);
-
-	p {
-		@include option(padding, 10px 0 0, 6px 0 0);
+		&_4 {
+			@include option(top, 51.5%, 41.5%, 48.4%);
+			@include option(left, 80.4%, 80.1%, 80.3%);
+		}
 	}
 
-	&::before {
-		content: "";
-		display: block;
-		@include option(width, 11px);
-		@include option(height, 10px);
+	&__tooltip {
+		@include option(width, 24px, 16px, 24px);
+		@include option(height, 24px, 16px, 24px);
+		padding: 0;
 
-		background-image: url("./../../public/images/icons/corner.svg");
-		background-size: 11px 10px;
+		background-color: transparent;
+		background-image: url("./../../public/images/icons/dot.svg");
+		@include option(background-size, 24px 24px, 16px 16px, 24px 24px);
 		background-position: center;
 		background-repeat: no-repeat;
+		border: none;
 
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			@include option(width, 36px, 24px, 36px);
+			@include option(height, 36px, 24px, 36px);
+
+			background-image: url("./../../public/images/icons/dot_hovered.svg");
+			@include option(background-size, 36px 36px, 24px 24px, 36px 36px);
+		}
+	}
+
+	&__tooltip-text {
 		position: absolute;
-		bottom: -9px;
-		@include option(left, 50%);
+		@include option(bottom, 135%, 150%);
+		left: 50%;
 		transform: translateX(-50%);
-	}
 
-	&_0 {
-		@include option(left, 50%, 240%, 50%);
-		z-index: 2;
+		@include option(width, 417px, 248px);
+		@include option(padding, 12px, 12px 13px);
+
+		@include option(font-size, 16px, 14px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%, 157%);
+		color: $black;
+
+		background-color: $white;
+		border-radius: 16px;
+		box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.24);
+
+		&-enter {
+			opacity: 0;
+		}
+
+		&-enter-active,
+		&-enter-done {
+			opacity: 1;
+			transition: .3s ease-in-out;
+		}
+
+		&-exit-active {
+			opacity: 0;
+			transition: .3s ease-in-out;
+		}
+
+
+		p {
+			@include option(padding, 10px 0 0, 6px 0 0);
+		}
 
 		&::before {
-			@include option(left, 50%, 37.5%, 50%);
+			content: "";
+			display: block;
+			@include option(width, 11px);
+			@include option(height, 10px);
+
+			background-image: url("./../../public/images/icons/corner.svg");
+			background-size: 11px 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			position: absolute;
+			bottom: -9px;
+			@include option(left, 50%);
+			transform: translateX(-50%);
+		}
+
+		&_0 {
+			@include option(left, 50%, 240%, 50%);
+			z-index: 2;
+
+			&::before {
+				@include option(left, 50%, 37.5%, 50%);
+			}
+		}
+
+		&_1 {
+			z-index: 3;
+		}
+
+		&_2 {
+			z-index: 2;
+		}
+
+		&_3 {
+			@include option(left, 50%, -15%, 50%);
+			z-index: 2;
+
+			&::before {
+				@include option(left, 50%, 54%, 50%);
+			}
+		}
+
+		&_4 {
+			@include option(left, 50%, -120%, 50%);
+			z-index: 2;
+
+			&::before {
+				@include option(left, 50%, 61%, 50%);
+			}
+		}
+
+		&_active {
+
+			.map__image-world {
+				.usa {
+					fill: $violet;
+					fill-opacity: 0.16;
+				}
+
+				.usa-border {
+					fill: $violet;
+				}
+			}
+
+			.map__image-world {
+				.india {
+					fill: $violet;
+					fill-opacity: 0.16;
+					stroke: $violet;
+				}
+			}
+
+			.map__image-world {
+				.europe {
+					fill: $violet;
+					fill-opacity: 0.16;
+					stroke: $violet;
+				}
+
+				.europe-border {
+					fill: $violet;
+				}
+			}
+
+			.map__image-world {
+				.russia {
+					fill: $violet;
+					fill-opacity: 0.16;
+				}
+
+				.russia-border {
+					fill: $violet;
+				}
+			}
+
+			.map__image-world {
+				.taiwan {
+					fill: $violet;
+					fill-opacity: 0.16;
+					stroke: $violet;
+				}
+			}
 		}
 	}
-
-	&_1 {
-		z-index: 3;
-	}
-
-	&_2 {
-		z-index: 2;
-	}
-
-	&_3 {
-		@include option(left, 50%, -15%, 50%);
-		z-index: 2;
-
-		&::before {
-			@include option(left, 50%, 54%, 50%);
-		}
-	}
-
-	&_4 {
-		@include option(left, 50%, -120%, 50%);
-		z-index: 2;
-
-		&::before {
-			@include option(left, 50%, 61%, 50%);
-		}
-	}
-
-	&_active {
-		display: block;
-		
-		.map__image-world {
-			.usa {
-				fill: $violet;
-				fill-opacity: 0.16;
-			}
-
-			.usa-border {
-				fill: $violet;
-			}
-		}
-
-		.map__image-world {
-			.india {
-				fill: $violet;
-				fill-opacity: 0.16;
-				stroke: $violet;
-			}
-		}
-
-		.map__image-world {
-			.europe {
-				fill: $violet;
-				fill-opacity: 0.16;
-				stroke: $violet;
-			}
-
-			.europe-border {
-				fill: $violet;
-			}
-		}
-
-		.map__image-world {
-			.russia {
-				fill: $violet;
-				fill-opacity: 0.16;
-			}
-
-			.russia-border {
-				fill: $violet;
-			}
-		}
-
-		.map__image-world {
-			.taiwan {
-				fill: $violet;
-				fill-opacity: 0.16;
-				stroke: $violet;
-			}
-		}
-	}
-  }
 }

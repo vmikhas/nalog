@@ -1,139 +1,149 @@
 .cases {
-  @include option(margin, 58px 0 0, 20px 0 0);
+	@include option(margin, 58px 0 0, 20px 0 0);
 
-  &__container {
-    @include container($DESKTOP, 0);
-    display: grid;
-    @include option(grid-template-columns, max-content 1fr, 1fr, max-content 1fr);
-    @include option(grid-template-rows, 1fr max-content);
-    @include option(column-gap, 96px, 0, 67px);
-    @include option(padding, 0 85px 0 67px, 0 40px);
-  }
-
-  &__inner {
-    grid-area: 1 / 1 / 3 / 2;
-    @include option(margin, auto 0, 0 auto);
-  }
-
-  &__image {
-    @include option(max-width, 498px, 295px, 275px);
-    width: 100%;
-    @include option(max-height, 411px, 167px, 219px);
-    @include option(margin, 0, 0 35px 0 0, 0 0 0 36px);
-    @include option(padding, 9px 0 0, 5px 0 0, 28px 0 0);
-
-    img {
-      object-fit: contain;
-    }
-  }
-
-  &__title {
-    @include option(padding, 67px 0 0, 35px 0 0, 36px 0 0);
-
-    @include option(font-size, 40px, 22px);
-    @include option(font-weight, 700);
-    text-transform: uppercase;
-    color: $black;
-  }
-
-  &__desc {
-    @include option(padding, 17px 0 16px);
-
-    @include option(font-size, 16px);
-    @include option(font-weight, 400);
-    @include option(line-height, 150%);
-    color: $black;
-  }
-
-  &__br-tablet {
-    display: none;
-
-    @media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
-      display: block;
-    }
-  }
-
-  &__text  {
-    @include option(padding, 0, 0, 7px 16px 0);
-
-    @include option(font-size, 16px);
-    @include option(font-weight, 400);
-    @include option(line-height, 150%);
-    color: $black;
-
-    p:first-child {
-      @include option(padding, 0, 0, 12px 0 0);
-    }
-
-    @media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
-      grid-area: 2 / 1 / 3 / 3;
-    }
-  }
-
-  &__tooltip {
-	position: relative;
-
-    width: 20px;
-    height: 20px;
-    @include option(margin, -2px 0 0 5px, 0 0 0 5px);
-    @include option(padding, 0 0 2px, 0 0 4px);
-
-	background-image: url("./../../public/images/icons/question.svg");
-    background-color: transparent;
-    border: none;
-
-	transition: 0.2s ease-in-out;
-
-    cursor: pointer;
-
-	&_active {
-		background-image: url("./../../public/images/icons/close.svg");
-	}
-  }
-
-  &__tooltip-text {
-	position: absolute;
-	@include option(bottom, 160%);
-	@include option(left, 50%, 50%, -258%);
-	transform: translateX(-50%);
-
-	display: none;
-	@include option(width, 400px, 248px);
-	@include option(padding, 12px);
-
-	@include option(font-size, 16px, 14px);
-	@include option(font-weight, 400);
-	@include option(line-height, 150%, 157%);
-	text-align: start;
-	color: $black;
-
-	background-color: $white;
-	border-radius: 16px;
-	box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.24);
-
-	p {
-		@include option(padding, 10px 0 0,);
+	&__container {
+		@include container($DESKTOP, 0);
+		display: grid;
+		@include option(grid-template-columns, max-content 1fr, 1fr, max-content 1fr);
+		@include option(grid-template-rows, 1fr max-content);
+		@include option(column-gap, 96px, 0, 67px);
+		@include option(padding, 0 85px 0 67px, 0 40px);
 	}
 
-	&::before {
-		content: "";
-		display: block;
-		@include option(width, 11px);
-		@include option(height, 10px);
+	&__inner {
+		grid-area: 1 / 1 / 3 / 2;
+		@include option(margin, auto 0, 0 auto);
+	}
 
-		background-image: url("./../../public/images/icons/corner.svg");
-		background-size: 11px 10px;
-		background-position: center;
-		background-repeat: no-repeat;
+	&__image {
+		@include option(max-width, 498px, 295px, 275px);
+		width: 100%;
+		@include option(max-height, 411px, 167px, 219px);
+		@include option(margin, 0, 0 35px 0 0, 0 0 0 36px);
+		@include option(padding, 9px 0 0, 5px 0 0, 28px 0 0);
 
+		img {
+			object-fit: contain;
+		}
+	}
+
+	&__title {
+		@include option(padding, 67px 0 0, 35px 0 0, 36px 0 0);
+
+		@include option(font-size, 40px, 22px);
+		@include option(font-weight, 700);
+		text-transform: uppercase;
+		color: $black;
+	}
+
+	&__desc {
+		@include option(padding, 17px 0 16px);
+
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
+		color: $black;
+	}
+
+	&__br-tablet {
+		display: none;
+
+		@media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
+			display: block;
+		}
+	}
+
+	&__text {
+		@include option(padding, 0, 0, 7px 16px 0);
+
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
+		color: $black;
+
+		p:first-child {
+			@include option(padding, 0, 0, 12px 0 0);
+		}
+
+		@media (min-width: $TABLET) and (max-width: $MIN-DESKTOP - 1) {
+			grid-area: 2 / 1 / 3 / 3;
+		}
+	}
+
+	&__tooltip {
+		position: relative;
+
+		width: 20px;
+		height: 20px;
+		@include option(margin, -2px 0 0 5px, 0 0 0 5px);
+		@include option(padding, 0 0 2px, 0 0 4px);
+
+		background-image: url("./../../public/images/icons/question.svg");
+		background-color: transparent;
+		border: none;
+
+		transition: 0.2s ease-in-out;
+
+		cursor: pointer;
+
+		&_active {
+			background-image: url("./../../public/images/icons/close.svg");
+		}
+	}
+
+	&__tooltip-text {
 		position: absolute;
-		bottom: -9px;
-		@include option(left, 50%, 50%, 75%);
+		@include option(bottom, 160%);
+		@include option(left, 50%, 50%, -258%);
 		transform: translateX(-50%);
-	}
 
-	&_active {
-		display: block;
+		@include option(width, 400px, 248px);
+		@include option(padding, 12px);
+
+		@include option(font-size, 16px, 14px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%, 157%);
+		text-align: start;
+		color: $black;
+
+		background-color: $white;
+		border-radius: 16px;
+		box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.24);
+
+		&-enter {
+			opacity: 0;
+		}
+
+		&-enter-active,
+		&-enter-done {
+			opacity: 1;
+			transition: 0.3s ease-in-out;
+		}
+
+		&-exit-active {
+			opacity: 0;
+			transition: 0.3s ease-in-out;
+		}
+
+		p {
+			@include option(padding, 10px 0 0, );
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			@include option(width, 11px);
+			@include option(height, 10px);
+
+			background-image: url("./../../public/images/icons/corner.svg");
+			background-size: 11px 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			position: absolute;
+			bottom: -9px;
+			@include option(left, 50%, 50%, 75%);
+			transform: translateX(-50%);
+		}
 	}
-  }
 }

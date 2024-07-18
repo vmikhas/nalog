@@ -1,12 +1,10 @@
 import { useState } from "react";
 import Picture from "../constants/Picture";
 import parse from "html-react-parser";
+import { CSSTransition } from "react-transition-group";
 
 export default function Filling({ image, button, title, desc, info, tooltip, subtitle, text, footnote }) {
 	const [open, setOpen] = useState(false);
-	const toggleTooltip = () => {
-		setOpen(p => !p);
-	};
 
 	return (
 		<section className={"filling"}>
@@ -19,11 +17,19 @@ export default function Filling({ image, button, title, desc, info, tooltip, sub
 					<h2 className={"filling__title"}>{parse(title)}</h2>
 					<p className={"filling__desc"}>{parse(desc)}</p>
 					<p className={"filling__info"}>{parse(info)}
-						<button class={`filling__tooltip ${open ? 'filling__tooltip_active' : ''}`} 
-								onClick={toggleTooltip}
-								type={"button"} 
-								aria-label={"Пояснение"}>
-									<span className={`filling__tooltip-text ${open ? 'filling__tooltip-text_active' : ''}`}>{parse(tooltip)}</span>
+						<button class={`filling__tooltip ${open ? 'filling__tooltip_active' : ''}`}
+							onClick={() => setOpen(!open)}
+							type={"button"}
+							aria-label={"Пояснение"}>
+							<CSSTransition
+								in={open}
+								timeout={300}
+								classNames={"filling__tooltip-text"}
+								mountOnEnter
+								unmountOnExit
+							>
+								<span className={`filling__tooltip-text`}>{parse(tooltip)}</span>
+							</CSSTransition>
 						</button>
 					</p>
 					<div className={"filling__box"}>

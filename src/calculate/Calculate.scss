@@ -1,92 +1,92 @@
 .calculate {
-  &__container {
-    @include container($DESKTOP, 0);
-    @include option(padding, 0 45px, 0 16px, 0 32px);
-  }
+	&__container {
+		@include container($DESKTOP, 0);
+		@include option(padding, 0 45px, 0 16px, 0 32px);
+	}
 
-  &__wrapper {
-    position: relative;
-    z-index: 2;
+	&__wrapper {
+		position: relative;
+		z-index: 2;
 
-    @include option(margin, -139px 0 0, -227px 0 0, -168px 0 0);
-    @include option(padding, 0 40px, 0 17px);
+		@include option(margin, -139px 0 0, -227px 0 0, -168px 0 0);
+		@include option(padding, 0 40px, 0 17px);
 
-    backdrop-filter: blur(32px);
-    // background: linear-gradient(180deg, rgb(248, 248, 248), rgb(255, 255, 255) 100%);
-    // background: radial-gradient(111.94% 141.42% at 0% 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
-    border-radius: 16px;
-    box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.12);
-  }
+		backdrop-filter: blur(32px);
+		// background: linear-gradient(180deg, rgb(248, 248, 248), rgb(255, 255, 255) 100%);
+		// background: radial-gradient(111.94% 141.42% at 0% 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+		border-radius: 16px;
+		box-shadow: 0 4px 56px 0 rgba(0, 0, 0, 0.12);
+	}
 
-  &__title {
-    position: relative;
-    z-index: 2;
+	&__title {
+		position: relative;
+		z-index: 2;
 
-    @include option(padding, 32px 0 0, 24px 0 0, 24px 7px 0);
+		@include option(padding, 32px 0 0, 24px 0 0, 24px 7px 0);
 
-    @include option(font-size, 22px);
-    @include option(font-weight, 700);
-    @include option(text-align, start, center, start);
-    text-transform: uppercase;
-    color: $white;
-  }
+		@include option(font-size, 22px);
+		@include option(font-weight, 700);
+		@include option(text-align, start, center, start);
+		text-transform: uppercase;
+		color: $white;
+	}
 
-  &__image {
-    position: absolute;
-    @include option(top, -20.8%, -13.7%, -75px);
-    @include option(right, 3.3%, 0.5%, -32px);
-    z-index: 1;
+	&__image {
+		position: absolute;
+		@include option(top, -20.8%, -13.7%, -75px);
+		@include option(right, 3.3%, 0.5%, -32px);
+		z-index: 1;
 
-    @include option(max-width, 330px, 169px, 205px);
-    width: 100%;
+		@include option(max-width, 330px, 169px, 205px);
+		width: 100%;
 
-    img {
-      object-fit: contain;
-    }
-  }
+		img {
+			object-fit: contain;
+		}
+	}
 
-  &__form {
-    position: relative;
-    z-index: 2;
+	&__form {
+		position: relative;
+		z-index: 2;
 
-    @include option(padding, 16px 0 0, 16px 7px 0);
-  }
+		@include option(padding, 16px 0 0, 16px 7px 0);
+	}
 
-  &__input {
-    @include option(max-width, 512px, 296px, 266px);
-    width: 100%;
-    height: 48px;
-    @include option(margin, 0 16px 0 0, 0 0 16px 0, 0 16px 0 0);
-    @include option(padding, 0 20px);
+	&__input {
+		@include option(max-width, 512px, 296px, 266px);
+		width: 100%;
+		height: 48px;
+		@include option(margin, 0 16px 0 0, 0 0 16px 0, 0 16px 0 0);
+		@include option(padding, 0 20px);
 
-    @include option(font-size, 16px);
-    @include option(font-weight, 400);
-    @include option(line-height, 150%);
-    color: $grey800;
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
+		color: $grey800;
 
-    border: none;
-    border-radius: 8px;
+		border: none;
+		border-radius: 8px;
 
-    &::placeholder {
-      color: $grey500;
-    }
-  }
+		&::placeholder {
+			color: $grey500;
+		}
+	}
 
-  &__button {
-    @include option(max-width, 208px, 296px, 208px);
-    width: 100%;
-    height: 48px;
-    @include option(padding, 0 24px);
+	&__button {
+		@include option(max-width, 208px, 296px, 208px);
+		width: 100%;
+		height: 48px;
+		@include option(padding, 0 24px);
 
-    @include option(font-size, 16px);
-    @include option(font-weight, 700);
-    color: $white;
+		@include option(font-size, 16px);
+		@include option(font-weight, 700);
+		color: $white;
 
-    background-color: $violet;
-    border: none;
-    border-radius: 8px;
+		background-color: $violet;
+		border: none;
+		border-radius: 8px;
 
-    cursor: pointer;
+		cursor: pointer;
 
 		transition: 0.3s ease;
 
@@ -98,102 +98,120 @@
 		&:active {
 			opacity: 0.7;
 		}
-  }
+	}
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    @include option(padding, 25px 0 0, 25px 0 0 7px);
-  }
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		@include option(padding, 25px 0 0, 25px 0 0 7px);
+	}
 
-  &__inner {
-    display: flex;
-    @include option(gap, 33px, 19px, 25px);
-  }
+	&__inner {
+		display: flex;
+		@include option(gap, 33px, 19px, 25px);
+	}
 
-  &__term {
-    @include option(font-size, 14px);
-    @include option(font-weight, 400);
-    @include option(line-height, 157%);
+	&__term {
+		@include option(font-size, 14px);
+		@include option(font-weight, 400);
+		@include option(line-height, 157%);
 
-    &_1 {
-      @include option(margin, 0 0 0 117px, 0 0 0 51px, 0 0 0 117px);
-    }
-  }
+		&_1 {
+			@include option(margin, 0 0 0 117px, 0 0 0 51px, 0 0 0 117px);
+		}
+	}
 
-  &__desc {
-    @include option(font-size, 32px, 22px, 32px);
-    @include option(font-weight, 700);
-    text-transform: uppercase;
-    color: $violet;
-  }
+	&__desc {
+		@include option(font-size, 32px, 22px, 32px);
+		@include option(font-weight, 700);
+		text-transform: uppercase;
+		color: $violet;
+	}
 
-  &__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @include option(min-height, 328px, 462px, 318px)
-  }
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@include option(min-height, 328px, 462px, 318px)
+	}
 
-  &__carousel {
-    @include option(padding, 25px 0 0, 25px 7px 0);
+	&__carousel {
+		@include option(padding, 25px 0 0, 25px 7px 0);
 
 		.swiper-slide {
 			width: auto;
 			@include option(padding, 15px 0 0, 16px 0 0, 15px 0 0);
 		}
-  }
+	}
 
-  &__carousel-list {
-    display: flex;
-    gap: 6px;
-    @include option(padding, 15px 0 0);
-  }
+	&__carousel-list {
+		display: flex;
+		gap: 6px;
+		@include option(padding, 15px 0 0);
+	}
 
-  &__carousel-button {
-    height: 32px;
-    padding: 0 16px;
+	&__carousel-button {
+		height: 32px;
+		padding: 0 16px;
 
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: $violet;
+		font-weight: 700;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $violet;
 
-    background-color: $white;
-    border: 1px solid rgba(128, 77, 180, 0.16);
-    border-radius: 8px;
+		background-color: $white;
+		border: 1px solid rgba(128, 77, 180, 0.16);
+		border-radius: 8px;
 
-    cursor: pointer;
+		cursor: pointer;
 		transition: 0.3s ease-in-out;
 
-    &_active {
-      background: rgba(128, 77, 180, 0.16);
+		&_active {
+			background: rgba(128, 77, 180, 0.16);
 			border: 1px solid rgba(128, 77, 180, 0);
-    }
+		}
 
 		&:hover {
 			opacity: 0.7;
 		}
-  }
+	}
 
-  &__carousel-desc {
-    @include option(padding, 17px 0 0);
+	&__carousel-desc-transition-enter-active {
+		opacity: 0;
+	}
 
-    @include option(font-size, 16px);
-    @include option(font-weight, 400);
-    @include option(line-height, 150%);
+	&__carousel-desc-transition-enter-done {
+		opacity: 1;
+		transition: opacity 200ms;
+	}
 
-    &_1 {
-      padding-bottom: 12px;
-    }
-  }
+	&__carousel-desc-transition-exit-active {
+		opacity: 1;
+	}
 
-  &__footnote {
-    @include option(padding, 0 0 39px, 0 7px 23px);
+	&__carousel-desc-transition-exit-done {
+		opacity: 0;
+		transition: opacity 200ms;
+	}
 
-    @include option(font-size, 10px);
-    @include option(font-weight, 400);
-    color: $grey600;
-  }
+	&__carousel-desc {
+		@include option(padding, 17px 0 0);
+
+		@include option(font-size, 16px);
+		@include option(font-weight, 400);
+		@include option(line-height, 150%);
+
+		&_1 {
+			padding-bottom: 12px;
+		}
+	}
+
+	&__footnote {
+		@include option(padding, 0 0 39px, 0 7px 23px);
+
+		@include option(font-size, 10px);
+		@include option(font-weight, 400);
+		color: $grey600;
+	}
 }
