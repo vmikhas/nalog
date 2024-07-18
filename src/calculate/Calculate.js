@@ -19,11 +19,7 @@ export default function Calculate({ content }) {
 					<h2 className={"calculate__title"}>{content.title}</h2>
 					<div className={"calculate__image"}><Picture {...content.image} /></div>
 					<form className={"calculate__form"} action={"#"} method={"POST"}>
-						<input className={"calculate__input"}
-							type={"number"}
-							name={"number"}
-							placeholder={"Введите сумму выигрыша"}
-							required />
+						<input className={"calculate__input"} type={"number"} min={"0"} name={"number"} placeholder={"Введите сумму выигрыша"} required />
 						<button className={"calculate__button"} type={"button"}>{content.button}</button>
 					</form>
 					<dl className={"calculate__list"}>

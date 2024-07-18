@@ -33,7 +33,7 @@
 
 	&__image {
 		position: absolute;
-		@include option(top, -20.8%, -13.7%, -75px);
+		@include option(top, -20.8%, -101px, -75px);
 		@include option(right, 3.3%, 0.5%, -32px);
 		z-index: 1;
 
@@ -63,6 +63,8 @@
 		@include option(font-weight, 400);
 		@include option(line-height, 150%);
 		color: $grey800;
+		// -webkit-appearance: none;
+		// margin: 0;
 
 		border: none;
 		border-radius: 8px;
@@ -70,6 +72,12 @@
 		&::placeholder {
 			color: $grey500;
 		}
+	}
+
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
 	}
 
 	&__button {
