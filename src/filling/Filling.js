@@ -17,7 +17,7 @@ export default function Filling({ image, button, title, desc, info, tooltip, sub
 					<h2 className={"filling__title"}>{parse(title)}</h2>
 					<p className={"filling__desc"}>{parse(desc)}</p>
 					<p className={"filling__info"}>{parse(info)}
-						<button class={`filling__tooltip ${open ? 'filling__tooltip_active' : ''}`}
+						<button className={`filling__tooltip ${open ? 'filling__tooltip_active' : ''}`}
 							onClick={() => setOpen(!open)}
 							type={"button"}
 							aria-label={"Пояснение"}>

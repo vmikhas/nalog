@@ -1,16 +1,43 @@
 import parse from "html-react-parser";
 import Picture from "../constants/Picture";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import { settings } from "../constants/carousel-settings";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 
+
+const calculateRate = (win) => {
+	if (win <= 4000) return 0;
+	else if (win >= 4001 && win <= 5000000) return 13;
+	return 15;
+};
+const calculateTax = (win, percent) => {
+	return Math.ceil((win * percent) / 100);
+};
+const calculateResult = (win, calculateTax) => {
+	return Math.floor(win - calculateTax);
+};
+
+
 export default function Calculate({ content }) {
 	const [active, setActive] = useState('average');
 
-	// const calculateTax = (number, tax) => {
-	// };
+	const [doCalc, setDoCalc] = useState(false);
+	const [win, setWin] = useState('placeholder');
+	const [netWin, setNetWin] = useState(content.win);
+	const [nalog, setNalog] = useState(content.tax);
+
+	useEffect(() => {
+		if (!doCalc) return;
+		const percent = calculateRate(win);
+		const tax = calculateTax(win, percent);
+		const result = calculateResult(win, tax);
+
+		setNetWin(result);
+		setNalog(tax);
+		setDoCalc(false);
+	}, [doCalc, win]);
 
 	return (
 		<section className={"calculate"}>
@@ -18,20 +45,26 @@ export default function Calculate({ content }) {
 				<div className={"calculate__wrapper"}>
 					<h2 className={"calculate__title"}>{content.title}</h2>
 					<div className={"calculate__image"}><Picture {...content.image} /></div>
-					<form className={"calculate__form"} action={"#"} method={"POST"}>
-						<input className={"calculate__input"} type={"number"} min={"0"} name={"number"} placeholder={"Введите сумму выигрыша"} required />
-						<button className={"calculate__button"} type={"button"}>{content.button}</button>
-					</form>
-					<dl className={"calculate__list"}>
-						<div className={"calculate__inner"}>
+					<div className={"calculate__form"} >
+						<input className={"calculate__input"}
+							type={"number"}
+							value={win}
+							onChange={(e) => setWin(e.target.value)}
+							name={"number"}
+							min={"0"}
+							placeholder={"Введите сумму выигрыша"} required />
+						<button className={"calculate__button"} onClick={() => setDoCalc(true)}>{content.button}</button>
+					</div>
+					<div className={"calculate__list"}>
+						<ul className={"calculate__inner"}>
 							{content.terms.map((term, id) =>
-								<dt className={`calculate__term calculate__term_${id}`} key={id}>{term}</dt>)}
+								<li className={`calculate__term calculate__term_${id}`} key={id}>{term}</li>)}
+						</ul>
+						<div className={"calculate__result"}>
+							<p className={"calculate__desc calculate__desc_win"}>{netWin}</p>
+							<p className={"calculate__desc calculate__desc_tax"}>{nalog}</p>
 						</div>
-						<div className={"calculate__inner"}>
-							{content.details.map((detail, id) =>
-								<dd className={`calculate__desc calculate__desc_${id}`} key={id}>{detail}</dd>)}
-						</div>
-					</dl>
+					</div>
 					<div className={"calculate__box"}>
 						<div className={"calculate__carousel"}>
 							<h3 className={"calculate__term"}>{content.carouselTitle}</h3>

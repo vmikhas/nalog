@@ -15,9 +15,8 @@ export default function Cases({ image, title, desc, tooltip, text }) {
 				<div className={"cases__wrapper"}>
 					<h2 className={"cases__title"}>{parse(title)}</h2>
 					<p className={"cases__desc"}>{parse(desc)}
-						<button class={`cases__tooltip ${open ? 'cases__tooltip_active' : ''}`}
+						<button className={`cases__tooltip ${open ? 'cases__tooltip_active' : ''}`}
 							onClick={() => setOpen(!open)}
-							type={"button"}
 							aria-label={"Пояснение"}>
 							<CSSTransition in={open} timeout={300} classNames={"cases__tooltip-text"} mountOnEnter unmountOnExit>
 								<span className={`cases__tooltip-text`}>{parse(tooltip)}</span>

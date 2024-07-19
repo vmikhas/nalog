@@ -48,10 +48,8 @@ export const calculateContent = {
 		'Вы получите:',
 		'Налог:'
 	],
-	details: [
-		'63 999 999 ₽',
-		'9 450 095 ₽'
-	],
+	win: '63 999 999 ₽',
+	tax: '9 450 095 ₽',
 	carouselTitle: 'Размеры выигрышей',
 	carouselItems: [
 		{ number: 'до 4000 ₽', type: 'few' },

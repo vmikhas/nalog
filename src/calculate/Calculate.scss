@@ -117,20 +117,23 @@
 
 	&__inner {
 		display: flex;
-		@include option(gap, 33px, 19px, 25px);
+		@include option(gap, 150px, 70px, 25px);
 	}
 
 	&__term {
 		@include option(font-size, 14px);
 		@include option(font-weight, 400);
 		@include option(line-height, 157%);
+	}
 
-		&_1 {
-			@include option(margin, 0 0 0 117px, 0 0 0 51px, 0 0 0 117px);
-		}
+	&__result {
+		display: flex;
+		@include option(gap, 16px, 6px, 13px);
 	}
 
 	&__desc {
+		@include option(min-width, 230px, 160px, 225px);
+
 		@include option(font-size, 32px, 22px, 32px);
 		@include option(font-weight, 700);
 		text-transform: uppercase;

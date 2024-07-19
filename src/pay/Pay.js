@@ -27,7 +27,7 @@ export default function Pay({ content }) {
 						</SwitchTransition>
 						<SwitchTransition>
 							<CSSTransition key={active} classNames={"pay__desc"} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
-								{active ? <p className={"pay__desc"}>{parse(content[active].desc)}</p> : <p />}
+								{active ? <span className={"pay__desc"}>{parse(content[active].desc)}</span> : <p />}
 							</CSSTransition>
 						</SwitchTransition>
 					</div>
