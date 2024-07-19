@@ -43,10 +43,53 @@
 
 		object-fit: contain;
 
-		&_active {
-			&.usa {
-				fill: #804DB4;
+		&_0 {
+			.usa {
+				fill: $violet;
 				fill-opacity: 0.16;
+			}
+
+			.usa-border {
+				fill: $violet;
+			}
+		}
+
+		&_1 {
+			.india {
+				fill: $violet;
+				fill-opacity: 0.16;
+				stroke: $violet;
+			}
+		}
+
+		&_2 {
+			.europe {
+				fill: $violet;
+				fill-opacity: 0.16;
+				stroke: $violet;
+			}
+
+			.europe-border {
+				fill: $violet;
+			}
+		}
+
+		&_3 {
+			.russia {
+				fill: $violet;
+				fill-opacity: 0.16;
+			}
+
+			.russia-border {
+				fill: $violet;
+			}
+		}
+
+		&_4 {
+			.taiwan {
+				fill: $violet;
+				fill-opacity: 0.16;
+				stroke: $violet;
 			}
 		}
 	}
@@ -193,59 +236,6 @@
 
 			&::before {
 				@include option(left, 50%, 61%, 50%);
-			}
-		}
-
-		&_active {
-
-			.map__image-world {
-				.usa {
-					fill: $violet;
-					fill-opacity: 0.16;
-				}
-
-				.usa-border {
-					fill: $violet;
-				}
-			}
-
-			.map__image-world {
-				.india {
-					fill: $violet;
-					fill-opacity: 0.16;
-					stroke: $violet;
-				}
-			}
-
-			.map__image-world {
-				.europe {
-					fill: $violet;
-					fill-opacity: 0.16;
-					stroke: $violet;
-				}
-
-				.europe-border {
-					fill: $violet;
-				}
-			}
-
-			.map__image-world {
-				.russia {
-					fill: $violet;
-					fill-opacity: 0.16;
-				}
-
-				.russia-border {
-					fill: $violet;
-				}
-			}
-
-			.map__image-world {
-				.taiwan {
-					fill: $violet;
-					fill-opacity: 0.16;
-					stroke: $violet;
-				}
 			}
 		}
 	}

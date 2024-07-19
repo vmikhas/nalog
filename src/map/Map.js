@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ReactComponent as MapImage } from "./../assest/images/map.svg"
 import parse from "html-react-parser";
 import { CSSTransition } from "react-transition-group";
+import classNames from "classnames";
 
 export default function Map({ content }) {
 	const [activeId, setActiveId] = useState(null);
@@ -12,7 +13,7 @@ export default function Map({ content }) {
 				<h2 className={"map__title"}>{content.title}</h2>
 				<p className={"map__desc"}>{parse(content.desc)}</p>
 				<div className={"map__image"}>
-					<MapImage className={`map__image-world`} />
+					<MapImage className={classNames(`map__image-world`, { [`map__image-world_${activeId}`]: activeId !== null })} />
 					<ul className={"map__list"}>
 						{content.dots.map((dot, id) =>
 							<li className={`map__item map__item_${id}`} key={"item-" + id}>

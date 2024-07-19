@@ -16,14 +16,12 @@ export default function Winnings({ title, text, items, image }) {
 					</div>
 				</div>
 				<Swiper {...options.winning}>
-					<ul className={"winnings__list"}>
-						{items.map((item, id) =>
-							<SwiperSlide key={id}>
-								<li className={`winnings__item winnings__item_${id}`}>
-									{parse(item)}
-								</li>
-							</SwiperSlide>)}
-					</ul>
+					{items.map((item, id) =>
+						<SwiperSlide key={id}>
+							<div className={`winnings__item winnings__item_${id}`}>
+								{parse(item)}
+							</div>
+						</SwiperSlide>)}
 				</Swiper>
 			</div>
 		</section>
