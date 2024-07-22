@@ -1,7 +1,7 @@
 import Picture from "../constants/Picture";
 import parse from "html-react-parser";
 
-export default function Footer({ info, imageLogo, socials, organizations, orgText, associations, assText }) {
+export default function Footer({ info, imageLogo, socials, organizations, organizationText, associations, associationText }) {
 	return (
 		<section className={"footer"}>
 			<div className={"footer__container"}>
@@ -20,23 +20,23 @@ export default function Footer({ info, imageLogo, socials, organizations, orgTex
 					</ul>
 				</div>
 				<div className={"footer__inner"}>
-					<div className={"footer__org"}>
-						<ul className={"footer__org-list"}>
+					<div className={"footer__organization"}>
+						<ul className={"footer__organization-list"}>
 							{organizations.map((organization, id) =>
-								<li className={`footer__org-item footer__org-item_${id}`} key={id}>
+								<li className={`footer__organization-item footer__organization-item_${id}`} key={id}>
 									<Picture imgAttr={organization.imgAttr} sources={organization.sources} />
 								</li>)}
 						</ul>
-						<p className={"footer__org-text"}>{parse(orgText)}</p>
+						<p className={"footer__organization-text"}>{parse(organizationText)}</p>
 					</div>
-					<div className={"footer__ass"}>
-						<ul className={"footer__ass-list"}>
+					<div className={"footer__association"}>
+						<ul className={"footer__association-list"}>
 							{associations.map((association, id) =>
-								<li className={`footer__ass-item footer__ass-item_${id}`} key={id}>
+								<li className={`footer__association-item footer__association-item_${id}`} key={id}>
 									<Picture imgAttr={association.imgAttr} sources={association.sources} />
 								</li>)}
 						</ul>
-						<p className={"footer__ass-text"}>{assText}</p>
+						<p className={"footer__association-text"}>{associationText}</p>
 					</div>
 				</div>
 			</div>

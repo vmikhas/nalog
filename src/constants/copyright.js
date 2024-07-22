@@ -402,7 +402,7 @@ export const footerContent = {
 			}
 		}
 	],
-	orgText: 'Организаторами лотерей являются Министерство спорта РФ<br class="footer__br-tablet-min" /> и&nbsp;Министерство финансов РФ.',
+	organizationText: 'Организаторами лотерей являются Министерство спорта РФ<br class="footer__br-tablet-min" /> и&nbsp;Министерство финансов РФ.',
 	associations: [
 		{
 			sources: [
@@ -451,5 +451,5 @@ export const footerContent = {
 			}
 		}
 	],
-	assText: '«Столото» состоит во Всемирной и Европейской лотерейных ассоциациях (The World Lottery Association и The European Lotteries Association). Это гарантирует соблюдение прав участников, случайность определения победителей, своевременную выплату выигрышей, конфиденциальность личных данных.'
+	associationText: '«Столото» состоит во Всемирной и Европейской лотерейных ассоциациях (The World Lottery Association и The European Lotteries Association). Это гарантирует соблюдение прав участников, случайность определения победителей, своевременную выплату выигрышей, конфиденциальность личных данных.'
 }

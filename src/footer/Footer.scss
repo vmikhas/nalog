@@ -123,27 +123,27 @@
 		@include option(padding, 42px 0 0 95px, 58px 0 0, 40px 0 0);
 	}
 
-	&__ass {
+	&__association {
 		@include option(padding, 32px 0 0, 27px 0 0, 17px 0 0);
 	}
 
-	&__org-list,
-	&__ass-list {
+	&__organization-list,
+	&__association-list {
 		display: flex;
 		gap: 16px;
 	}
 
-	&__org-item,
-	&__ass-item {
+	&__organization-item,
+	&__association-item {
 		width: 32px;
 		height: 32px;
 	}
 
-	&__org-text {
+	&__organization-text {
 		@include option(padding, 13px 0 0, 16px 0 0, 15px 0 0);
 	}
 
-	&__ass-text {
+	&__association-text {
 		@include option(padding, 16px 0 0);
 	}
 }
