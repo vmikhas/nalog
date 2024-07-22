@@ -38,8 +38,8 @@
 	}
 
 	&__image-world {
-		@include option(width, 1122px, 295px, 656px);
-		@include option(height, 554px, 145px, 327px);
+		@include option(width, 1122px, 295px, 656px, 860px);
+		@include option(height, 554px, 145px, 327px, 470px);
 
 		object-fit: contain;
 
@@ -102,28 +102,28 @@
 		position: relative;
 
 		&_0 {
-			@include option(top, 214px, 51px, 121px);
-			@include option(right, 354px, 93px, 203px);
+			@include option(top, 214px, 51px, 121px, 181px);
+			@include option(right, 354px, 93px, 203px, 267px);
 		}
 
 		&_1 {
-			@include option(top, 243px, 48px, 127px);
-			@include option(left, 211px, 55px, 122px);
+			@include option(top, 243px, 48px, 127px, 202px);
+			@include option(left, 211px, 55px, 122px, 163px);
 		}
 
 		&_2 {
-			@include option(top, 129px, 2px, 46px);
-			@include option(right, 18px, 3px, 7px);
+			@include option(top, 129px, 2px, 46px, 97px);
+			@include option(right, 18px, 3px, 7px, 12px);
 		}
 
 		&_3 {
-			@include option(top, 28px, -35px, -21px);
-			@include option(left, 266px, 71px, 155px);
+			@include option(top, 28px, -35px, -21px, 11px);
+			@include option(left, 266px, 71px, 155px, 203px);
 		}
 
 		&_4 {
-			@include option(top, 159px, -16px, 42px);
-			@include option(left, 339px, 88px, 199px);
+			@include option(top, 159px, -16px, 42px, 115px);
+			@include option(left, 339px, 88px, 199px, 263px);
 		}
 
 
