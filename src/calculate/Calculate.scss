@@ -100,7 +100,7 @@
 
 		&:hover,
 		&:focus {
-			scale: 1.05;
+			@include option(scale, 1.05, 1);
 		}
 
 		&:active {
@@ -117,7 +117,7 @@
 
 	&__inner {
 		display: flex;
-		@include option(gap, 150px, 70px, 25px);
+		@include option(gap, 150px, 70px, 142px);
 	}
 
 	&__term {
@@ -195,7 +195,7 @@
 		@include option(font-weight, 400);
 		@include option(line-height, 150%);
 
-		&_1 {
+		& p:not(:last-child) {
 			padding-bottom: 12px;
 		}
 

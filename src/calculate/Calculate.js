@@ -1,6 +1,6 @@
 import parse from "html-react-parser";
 import Picture from "../constants/Picture";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import { settings } from "../constants/carousel-settings";
@@ -39,6 +39,21 @@ export default function Calculate({ content }) {
 		setDoCalc(false);
 	}, [doCalc, win]);
 
+	const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 1023);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsWideScreen(window.innerWidth > 1023);
+		};
+
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	const deviceContent = useMemo(() => isWideScreen ? 'descD' : 'descM', [isWideScreen])
+
 	return (
 		<section className={"calculate"}>
 			<div className={"calculate__container"}>
@@ -46,13 +61,8 @@ export default function Calculate({ content }) {
 					<h2 className={"calculate__title"}>{content.title}</h2>
 					<div className={"calculate__image"}><Picture {...content.image} /></div>
 					<div className={"calculate__form"} >
-						<input className={"calculate__input"}
-							type={"number"}
-							value={win}
-							onChange={(e) => setWin(e.target.value)}
-							name={"number"}
-							min={"0"}
-							placeholder={"Введите сумму выигрыша"} required />
+						<input className={"calculate__input"} type={"number"} value={win} onChange={(e) => setWin(e.target.value)}
+							name={"number"} min={"0"} placeholder={"Введите сумму выигрыша"} required />
 						<button className={"calculate__button"} onClick={() => setDoCalc(true)}>{content.button}</button>
 					</div>
 					<div className={"calculate__list"}>
@@ -61,8 +71,8 @@ export default function Calculate({ content }) {
 								<li className={`calculate__term calculate__term_${id}`} key={id}>{term}</li>)}
 						</ul>
 						<div className={"calculate__result"}>
-							<p className={"calculate__desc calculate__desc_win"}>{netWin}</p>
-							<p className={"calculate__desc calculate__desc_tax"}>{nalog}</p>
+							<p className={"calculate__desc calculate__desc_win"}>{netWin} ₽</p>
+							<p className={"calculate__desc calculate__desc_tax"}>{nalog} ₽</p>
 						</div>
 					</div>
 					<div className={"calculate__box"}>
@@ -82,8 +92,8 @@ export default function Calculate({ content }) {
 								</ul>
 							</Swiper>
 							<SwitchTransition>
-								<CSSTransition key={active} classNames={"calculate__carousel-desc"} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
-									{active ? <p className={"calculate__carousel-desc"}>{parse(content[active].desc)}</p> : <p />}
+								<CSSTransition key={`${active}-${deviceContent}`} classNames={"calculate__carousel-desc"} timeout={300}>
+									<p className={"calculate__carousel-desc"}>{parse(content[active][deviceContent])}</p>
 								</CSSTransition>
 							</SwitchTransition>
 						</div>

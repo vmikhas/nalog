@@ -73,8 +73,9 @@
 			background-color: $violet;
 		}
 
-		&:hover {
-			scale: 1.2;
+		&:hover,
+		&:focus {
+			@include option(scale, 1.2, 1);
 		}
 	}
 

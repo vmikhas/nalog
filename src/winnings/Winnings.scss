@@ -4,22 +4,6 @@
 	&__container {
 		@include container($DESKTOP, 0);
 		@include option(padding, 0 45px, 0 16px, 0 32px);
-
-		.swiper {
-			overflow: visible;
-
-			.swiper-wrapper {
-				@media (min-width: $MIN-DESKTOP) {
-					justify-content: center;
-					gap: 34px;
-					padding: 85px 0 0;
-				}
-			}
-
-			.swiper-slide {
-				@include option(width, auto, 336px);
-			}
-		}
 	}
 
 	&__wrapper {
@@ -110,7 +94,7 @@
 			background-image: url("./../../public/images/icons/message.svg");
 		}
 
-		@media (max-width: $MIN-DESKTOP) {
+		@media (max-width: $MIN-DESKTOP - 1) {
 			background-color: $white;
 			border-top: 56px solid rgba(128, 77, 180, 0.16);
 			border-radius: 16px;
@@ -142,6 +126,27 @@
 
 		&:active {
 			opacity: 0.6;
+		}
+	}
+
+	.swiper {
+		overflow: visible;
+		@include option(padding, 0, 0 0 0 16px, 0 16px 0 32px);
+
+		.swiper-wrapper {
+			@media (min-width: $MIN-DESKTOP) {
+				justify-content: center;
+				gap: 34px;
+				padding: 85px 0 0;
+			}
+		}
+
+		.swiper-slide {
+			@include option(width, auto, 336px, 336px);
+
+			@media (min-width: 1024px) and (max-width: 1200px) {
+				width: 300px;
+			}
 		}
 	}
 }
