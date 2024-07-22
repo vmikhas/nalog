@@ -126,6 +126,10 @@
 		span {
 			white-space: nowrap;
 		}
+
+		&:visited {
+			color: $violet;
+		}
 	}
 
 	&__image {
