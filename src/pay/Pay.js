@@ -21,12 +21,12 @@ export default function Pay({ content }) {
 								</li>)}
 						</ul>
 						<SwitchTransition>
-							<CSSTransition key={active} classNames={"pay__subtitle"} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
+							<CSSTransition key={active} classNames={"pay__subtitle"} timeout={300}>
 								{active ? <h3 className={"pay__subtitle"}>{content[active].subtitle}</h3> : <span />}
 							</CSSTransition>
 						</SwitchTransition>
 						<SwitchTransition>
-							<CSSTransition key={active} classNames={"pay__desc"} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}>
+							<CSSTransition key={active} classNames={"pay__desc"} timeout={300}>
 								{active ? <div className={"pay__desc"}>{parse(content[active].desc)}</div> : <p />}
 							</CSSTransition>
 						</SwitchTransition>
